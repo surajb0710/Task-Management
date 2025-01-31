@@ -1,36 +1,37 @@
-import PropType from 'prop-types';
+import { CircularProgress, Box } from '@mui/material';
+import PropTypes from 'prop-types';
 
-const RoundProgressBar = ({ percentage, boxSize }) => {
-  const radius = 20;
-  const circumference = 2 * Math.PI * radius;
-  const strokeDashoffset = ((100 - percentage) / 100) * circumference;
-
+const RoundProgressBar = ({ percentage }) => {
   return (
-    <svg
-      width="100%"
-      height="100%"
-      viewBox={`0 0 ${boxSize} ${boxSize}`}
-      className="-rotate-90"
-    >
-      <circle
-        cx="34"
-        cy="34"
-        r={radius}
-        fill="transparent"
-        stroke="#FFF"
-        strokeWidth="4"
-        strokeDasharray={circumference}
-        strokeDashoffset={strokeDashoffset}
-        strokeLinecap="round"
-        style={{ transition: 'stroke-dashoffset 0.5s ease-in-out' }}
+    <Box position="relative" display="inline-flex">
+      <CircularProgress
+        variant="determinate"
+        value={percentage}
+        size={68}
+        thickness={2}
+        style={{
+          color: '#546FFF',
+        }}
       />
-    </svg>
+      <Box
+        position="absolute"
+        top="50%"
+        left="50%"
+        style={{
+          transform: 'translate(-50%, -50%)',
+          fontSize: '16px',
+          fontWeight: 'bold',
+          color: 'white',
+        }}
+      >
+        {`${percentage}%`}
+      </Box>
+    </Box>
   );
 };
 
 RoundProgressBar.propTypes = {
-  percentage: PropType.number.isRequired,
-  boxSize: PropType.number.isRequired,
+  percentage: PropTypes.number.isRequired,
 };
 
 export default RoundProgressBar;

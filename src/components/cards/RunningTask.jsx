@@ -11,7 +11,7 @@ const RunningTask = () => {
       </p>
       <div className="flex gap-[18px] items-center">
         <div className="h-[68px] w-[68px]">
-          <RoundProgressBar percentage={50} boxsize={68} />
+          <RoundProgressBar percentage={60} />
         </div>
         <div className="flex flex-col gap-1">
           <strong className="text-white plus-jakarta-sans font-semibold text-xl">
