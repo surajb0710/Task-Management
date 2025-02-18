@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { sidebar } from '../assets/assets';
+import AddCircleOutlineOutlinedIcon from '@mui/icons-material/AddCircleOutlineOutlined';
 
 const Sidebar = () => {
   const location = useLocation();
@@ -41,48 +42,54 @@ const Sidebar = () => {
           <li
             className={`${
               location.pathname === '/tasks' && 'rounded-[10px] bg-[#F5F5F7]'
-            } px-5 py-2.5 flex gap-3`}
+            } px-5 py-2.5 flex justify-between`}
           >
-            <img
-              src={
-                location.pathname === '/tasks'
-                  ? sidebar.book_dark
-                  : sidebar.book
-              }
-              alt=""
-              className="w-6 h-6"
-            />
-            <p
-              className={`${
-                location.pathname === '/tasks' && 'text-[#141522]'
-              } text-sm font-semibold text-[#8E92BC]`}
-            >
-              Task
-            </p>
+            <div className="flex gap-3">
+              <img
+                src={
+                  location.pathname === '/tasks'
+                    ? sidebar.book_dark
+                    : sidebar.book
+                }
+                alt=""
+                className="w-6 h-6"
+              />
+              <p
+                className={`${
+                  location.pathname === '/tasks' && 'text-[#141522]'
+                } text-sm font-semibold text-[#8E92BC]`}
+              >
+                Task
+              </p>
+            </div>
+            <AddCircleOutlineOutlinedIcon />
           </li>
         </Link>
         <Link to="/mentors">
           <li
             className={`${
               location.pathname === '/mentors' && 'rounded-[10px] bg-[#F5F5F7]'
-            } px-5 py-2.5 flex gap-3`}
+            } px-5 py-2.5 flex justify-between`}
           >
-            <img
-              src={
-                location.pathname === '/mentors'
-                  ? sidebar.mentor_dark
-                  : sidebar.mentor
-              }
-              alt=""
-              className="w-6 h-6"
-            />
-            <p
-              className={`${
-                location.pathname === '/mentors' && 'text-[#141522]'
-              } text-sm font-semibold text-[#8E92BC]`}
-            >
-              Mentors
-            </p>
+            <div className="flex gap-3">
+              <img
+                src={
+                  location.pathname === '/mentors'
+                    ? sidebar.mentor_dark
+                    : sidebar.mentor
+                }
+                alt=""
+                className="w-6 h-6"
+              />
+              <p
+                className={`${
+                  location.pathname === '/mentors' && 'text-[#141522]'
+                } text-sm font-semibold text-[#8E92BC]`}
+              >
+                Mentors
+              </p>
+            </div>
+            <AddCircleOutlineOutlinedIcon />
           </li>
         </Link>
         <Link to="/messages">

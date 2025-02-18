@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { header, persons } from '../assets/assets';
-import SearchFilter from './common/SearchFilter';
+// import SearchFilter from './common/SearchFilter';
 
 const Header = () => {
   const [unReadNotifications, setUnreadNotifications] = useState([]);
 
   return (
     <>
-      <div className="flex justify-between bg-white p-8 max-h-[116px] w-full">
+      <div className="flex justify-between bg-white p-8 max-h-[116px] w-full sticky top-0 z-50">
         <div className="text-2xl font-semibold leading-[1.5] text-[#141522] flex items-center">
           Settings
         </div>
@@ -32,7 +32,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <SearchFilter />
+      {/* <SearchFilter /> */}
     </>
   );
 };
