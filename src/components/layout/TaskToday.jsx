@@ -1,4 +1,4 @@
-import UpcomingTask from '../cards/UpcomingTask';
+import UpcomingTask from '../cards/Task';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 
 const TaskToday = () => {

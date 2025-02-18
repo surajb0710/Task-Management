@@ -3,7 +3,7 @@ import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined';
 import { tasks } from '../../assets/assets';
 import ImageContainer from '../common/ImageContainer';
 
-const UpcomingTask = () => {
+const Task = () => {
   return (
     <div className="p-6 rounded-[10px] bg-white flex flex-col gap-4">
       <img src={tasks.task1} alt="" className="h-auto w-full rounded-[10px]" />
@@ -44,4 +44,4 @@ const UpcomingTask = () => {
   );
 };
 
-export default UpcomingTask;
+export default Task;

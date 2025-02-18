@@ -15,7 +15,7 @@ const Layout = () => {
   return (
     <div className="bg-[#F5F5F7] flex">
       <Sidebar />
-      <div className="grow ml-[252px]">
+      <div className="grow ml-[254px]">
         {location.pathname !== '/' && <Header />}
         <div className="">
           <Routes>

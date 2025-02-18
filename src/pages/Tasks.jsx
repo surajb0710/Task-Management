@@ -1,5 +1,13 @@
+import Timelimit from '../components/layout/TimeLimit';
+import NewTasks from '../components/layout/NewTasks';
+
 const Tasks = () => {
-  return <div className="mt-[116px]">Tasks</div>;
+  return (
+    <div className="w-full p-8 flex flex-col gap-8">
+      <Timelimit />
+      <NewTasks />
+    </div>
+  );
 };
 
 export default Tasks;
