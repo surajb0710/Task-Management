@@ -2,7 +2,7 @@ import Header from '../components/Header';
 import Calendar from '../components/Calendar';
 import TaskToday from '../components/layout/TaskToday';
 import RunningTask from '../components/cards/RunningTask';
-import MonthlyMentor from '../components/cards/MonthlyMentor';
+import Mentor from '../components/cards/Mentor';
 import UpcomingTask from '../components/cards/Task';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -28,8 +28,8 @@ const Dashboard = () => {
             </div>
           </div>
           <div className="flex gap-8">
-            <MonthlyMentor />
-            <MonthlyMentor />
+            <Mentor />
+            <Mentor />
           </div>
         </div>
         <div className="px-8 mb-8">

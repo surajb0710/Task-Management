@@ -1,9 +1,9 @@
 import { svgs } from '../../assets/assets';
 
-const MonthlyMentors = () => {
+const Mentor = () => {
   return (
     <div className="p-6 w-full rounded-[10px] bg-white">
-      <div className="flex items-center gap-2 mb-5">
+      <div className="flex items-center gap-2 mb-6">
         <img
           src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80"
           alt=""
@@ -20,6 +20,12 @@ const MonthlyMentors = () => {
         <button className="bg-none border-none outline-none text-[#546FFF] plus-jakarta-sans font-medium text-sm">
           + Follow
         </button>
+      </div>
+      <div className="text-[#8E92BC] text-sm font-medium mb-6">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt
+        itaque consequuntur dicta, inventore eveniet similique, aliquid libero
+        deserunt vitae earum maxime doloribus aliquam magni voluptatibus non ea?
+        Soluta, sit aut?
       </div>
       <div className="flex justify-between">
         <div className="flex gap-2">
@@ -39,4 +45,4 @@ const MonthlyMentors = () => {
   );
 };
 
-export default MonthlyMentors;
+export default Mentor;
