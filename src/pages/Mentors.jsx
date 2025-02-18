@@ -1,5 +1,5 @@
 const Mentors = () => {
-  return <div>Mentors</div>;
+  return <div className="mt-[116px]">Mentors</div>;
 };
 
 export default Mentors;

@@ -2,7 +2,7 @@ import RoundProgressBar from '../common/RoundProgressBar/RoundProgressBar';
 
 const RunningTask = () => {
   return (
-    <div className="flex flex-col gap-4 w-[194px] rounded-lg bg-black px-[18px] py-[16px]">
+    <div className="flex flex-col gap-4 rounded-lg bg-black px-[18px] py-[16px]">
       <h2 className="text-white plus-jakarta-sans font-semibold text-base">
         Running Task
       </h2>

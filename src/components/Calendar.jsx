@@ -21,14 +21,15 @@ const Calendar = () => {
   const nextYear = () => setCurrentDate(addYears(currentDate, 1));
 
   return (
-    <div className="w-80 p-4 border rounded-lg shadow-md bg-white text-center">
+    <div className="p-6 rounded-lg bg-white text-center max-w-[372px]">
       {/* Navigation */}
       <div className="flex justify-between items-center mb-2">
         <button onClick={prevYear} className="p-2 hover:bg-gray-200 rounded">
-          {/* <ChevronLeft size={20} /> */}
           <ArrowBackIosIcon fontSize="small" />
         </button>
-        <span className="text-lg font-bold">{format(currentDate, 'yyyy')}</span>
+        <span className="font-bold text-sm">
+          {`${format(currentDate, 'MMM')} ${format(currentDate, 'yyyy')}`}
+        </span>
         <button onClick={nextYear} className="p-2 hover:bg-gray-200 rounded">
           <ArrowForwardIosIcon fontSize="small" />
         </button>

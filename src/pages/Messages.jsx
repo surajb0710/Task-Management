@@ -1,5 +1,5 @@
 const Messages = () => {
-  return <div>Message</div>;
+  return <div className="mt-[116px]">Message</div>;
 };
 
 export default Messages;

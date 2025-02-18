@@ -2,7 +2,7 @@ import { svgs } from '../../assets/assets';
 
 const MonthlyMentors = () => {
   return (
-    <div className="p-6 w-[328px] rounded-[10px] bg-white">
+    <div className="p-6 w-full rounded-[10px] bg-white">
       <div className="flex items-center gap-2 mb-5">
         <img
           src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80"

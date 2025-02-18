@@ -7,15 +7,17 @@ import Dashboard from './pages/Dashboard';
 import Mentors from './pages/Mentors';
 import Messages from './pages/Messages';
 import Tasks from './pages/Tasks';
+import { useLocation } from 'react-router-dom';
 
-const App = () => {
+const Layout = () => {
+  const location = useLocation();
+
   return (
-    <BrowserRouter>
-      <Toaster position="top-center" />
-      <div className="bg-[#F5F5F7] flex">
-        <Sidebar />
-        <div className="grow">
-          <Header />
+    <div className="bg-[#F5F5F7] flex">
+      <Sidebar />
+      <div className="grow ml-[252px]">
+        {location.pathname !== '/' && <Header />}
+        <div className="">
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/mentors" element={<Mentors />} />
@@ -25,6 +27,15 @@ const App = () => {
           </Routes>
         </div>
       </div>
+    </div>
+  );
+};
+
+const App = () => {
+  return (
+    <BrowserRouter>
+      <Toaster position="top-center" />
+      <Layout />
     </BrowserRouter>
   );
 };

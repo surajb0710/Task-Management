@@ -2,8 +2,10 @@ import { persons } from '../../assets/assets';
 
 const LikedBy = () => {
   return (
-    <div className="flex gap-1 border border-[#D1D1D1] ">
-      <img src={persons.person1} alt="" className="h-6 w-6 rounded-full" />
+    <div className="flex gap-1">
+      {persons.person1 && (
+        <img src={persons.person1} alt="" className="h-6 w-6 rounded-full" />
+      )}
       {persons.person2 && (
         <img
           src={persons.person2}

@@ -5,7 +5,7 @@ const Sidebar = () => {
   const location = useLocation();
 
   return (
-    <div className="w-[254px] h-screen p-8 bg-white">
+    <div className="w-[254px] h-screen p-8 bg-white fixed">
       <Link to="/">
         <div className="flex gap-3 w-full mb-[60px] items-center">
           <img src={sidebar.logo} alt="" className="w-10 h-10" />
