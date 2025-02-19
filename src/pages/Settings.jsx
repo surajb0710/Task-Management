@@ -4,15 +4,34 @@ import Tab from '@mui/material/Tab';
 import { TabContext } from '@mui/lab';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
+import { getPendingTime } from '../utils/dateFormat.js';
+
+import { getAllTasksApi } from '../api/apiService';
 
 export default function Settings() {
   const [value, setValue] = React.useState('general');
   const [language, setLanguage] = React.useState('general');
   const [selectedValue, setSelectedValue] = React.useState('24');
+  const [array, setArray] = React.useState([]);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  React.useEffect(() => {
+    const fetchTasks = async () => {
+      const tasks = await getAllTasksApi();
+      setArray(tasks);
+    };
+    fetchTasks();
+  }, []);
+
+  React.useEffect(() => {
+    array.map((item) => {
+      const pendingTime = getPendingTime(item.dueDate);
+      console.log('pendingTime', pendingTime);
+    });
+  }, [array]);
 
   const handleLanguageChange = (event) => {
     setLanguage(event.target.value);

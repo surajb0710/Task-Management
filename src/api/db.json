@@ -1,0 +1,612 @@
+{
+  "users": [
+    {
+      "id": "user01",
+      "name": "Daniel Smith",
+      "expertise": "UI/UX Designer",
+      "imageUrl": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80",
+      "tasksAssigned": ["task01"]
+    },
+    {
+      "id": "user02",
+      "name": "Michael Brown",
+      "expertise": "Front End Developer",
+      "imageUrl": "https://images.unsplash.com/photo-1509967419530-da38b4704bc6",
+      "tasksAssigned": ["task02"]
+    },
+    {
+      "id": "user03",
+      "name": "David Wilson",
+      "expertise": "Data Analyst",
+      "imageUrl": "https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f",
+      "tasksAssigned": ["task03"]
+    },
+    {
+      "id": "user04",
+      "name": "Olivia Taylor",
+      "expertise": "DevOps Engineer",
+      "imageUrl": "https://images.unsplash.com/photo-1573140247632-f8fd74997d5c",
+      "tasksAssigned": ["task04"]
+    },
+    {
+      "id": "user05",
+      "name": "Mia Harris",
+      "expertise": "Software Engineer",
+      "imageUrl": "https://images.unsplash.com/photo-1485178575877-1a13bf489dfe",
+      "tasksAssigned": ["task05"]
+    },
+    {
+      "id": "user06",
+      "name": "Charlotte Anderson",
+      "expertise": "Mobile App Developer",
+      "imageUrl": "https://images.unsplash.com/photo-1474176857210-7287d38d27c6",
+      "tasksAssigned": ["task06"]
+    },
+    {
+      "id": "user07",
+      "name": "Isabella Gonzalez",
+      "expertise": "QA Engineer",
+      "imageUrl": "https://images.unsplash.com/photo-1601576084861-5de423553c0f",
+      "tasksAssigned": ["task07"]
+    },
+    {
+      "id": "user08",
+      "name": "William Scott",
+      "expertise": "Project Manager",
+      "imageUrl": "https://images.unsplash.com/photo-1608232543731-44d2ebe84dd7",
+      "tasksAssigned": ["task08"]
+    },
+    {
+      "id": "user09",
+      "name": "Henry Wright",
+      "expertise": "UI/UX Designer",
+      "imageUrl": "https://images.unsplash.com/photo-1507101105822-7472b28e22ac",
+      "tasksAssigned": ["task09"]
+    },
+    {
+      "id": "user10",
+      "name": "Ella Lopez",
+      "expertise": "Product Manager",
+      "imageUrl": "https://images.unsplash.com/photo-1615464684446-95b73066d285",
+      "tasksAssigned": ["task10"]
+    },
+    {
+      "id": "user11",
+      "name": "Ethan Clarke",
+      "expertise": "Software Engineer",
+      "imageUrl": "https://images.unsplash.com/photo-1558730234-d8b2281b0d00",
+      "tasksAssigned": ["task11"]
+    },
+    {
+      "id": "user12",
+      "name": "Liam Parker",
+      "expertise": "Full Stack Developer",
+      "imageUrl": "https://images.unsplash.com/photo-1531750026848-8ada78f641c2",
+      "tasksAssigned": ["task12"]
+    },
+    {
+      "id": "user13",
+      "name": "Sophia Hall",
+      "expertise": "Backend Developer",
+      "imageUrl": "",
+      "tasksAssigned": ["task13"]
+    },
+    {
+      "id": "user14",
+      "name": "Noah Young",
+      "expertise": "Cybersecurity Analyst",
+      "imageUrl": "",
+      "tasksAssigned": ["task14"]
+    },
+    {
+      "id": "user15",
+      "name": "Ava Turner",
+      "expertise": "Cloud Engineer",
+      "imageUrl": "",
+      "tasksAssigned": ["task15"]
+    },
+    {
+      "id": "user16",
+      "name": "James Rivera",
+      "expertise": "Embedded Systems Developer",
+      "imageUrl": "",
+      "tasksAssigned": ["task16"]
+    },
+    {
+      "id": "user17",
+      "name": "Lucas Robinson",
+      "expertise": "AI Engineer",
+      "imageUrl": "",
+      "tasksAssigned": ["task17"]
+    },
+    {
+      "id": "user18",
+      "name": "Grace Lee",
+      "expertise": "Game Developer",
+      "imageUrl": "",
+      "tasksAssigned": ["task18"]
+    },
+    {
+      "id": "user19",
+      "name": "Emma Hernandez",
+      "expertise": "Blockchain Developer",
+      "imageUrl": "",
+      "tasksAssigned": ["task19"]
+    },
+    {
+      "id": "user20",
+      "name": "Oliver Scott",
+      "expertise": "Data Scientist",
+      "imageUrl": "",
+      "tasksAssigned": ["task20"]
+    }
+  ],
+  "mentors": [
+    {
+      "id": "mentor01",
+      "name": "Jessica Jane",
+      "expertise": "Web Developer",
+      "imageUrl": "",
+      "reviews": [
+        {
+          "id": "mentorReview01",
+          "reviewerId": "user02",
+          "comment": "loream ipsum",
+          "expertise": "Web Developer",
+          "rating": 1
+        },
+        {
+          "id": "mentorReview02",
+          "reviewerId": "user02",
+          "comment": "loream ipsum",
+          "expertise": "Web Developer",
+          "rating": 1
+        },
+        {
+          "id": "mentorReview03",
+          "reviewerId": "user03",
+          "comment": "loream ipsum",
+          "expertise": "Web Developer",
+          "rating": 1
+        }
+      ],
+      "followers": ["user01", "user02", "user03"],
+      "tasksMentored": ["task01"]
+    },
+    {
+      "id": "mentor02",
+      "name": "Sophia Lee",
+      "expertise": "Full Stack Developer",
+      "imageUrl": "",
+      "reviews": [],
+      "followers": [],
+      "tasksMentored": ["task02"]
+    },
+    {
+      "id": "mentor03",
+      "name": "Emily Davis",
+      "expertise": "Backend Developer",
+      "imageUrl": "",
+      "reviews": [
+        {
+          "id": "mentorReview01",
+          "reviewerId": "user02",
+          "comment": "loream ipsum",
+          "expertise": "Web Developer",
+          "rating": 1
+        },
+        {
+          "id": "mentorReview02",
+          "reviewerId": "user02",
+          "comment": "loream ipsum",
+          "expertise": "Web Developer",
+          "rating": 1
+        },
+        {
+          "id": "mentorReview03",
+          "reviewerId": "user03",
+          "comment": "loream ipsum",
+          "expertise": "Web Developer",
+          "rating": 1
+        }
+      ],
+      "followers": [],
+      "tasksMentored": ["task03"]
+    },
+    {
+      "id": "mentor04",
+      "name": "Ethan White",
+      "expertise": "Cybersecurity Expert",
+      "imageUrl": "",
+      "reviews": [],
+      "followers": [],
+      "tasksMentored": ["task04"]
+    },
+    {
+      "id": "mentor05",
+      "name": "Benjamin Martinez",
+      "expertise": "AI Engineer",
+      "imageUrl": "",
+      "reviews": [],
+      "followers": [],
+      "tasksMentored": ["task05"]
+    },
+    {
+      "id": "mentor06",
+      "name": "James Thompson",
+      "expertise": "Machine Learning Engineer",
+      "imageUrl": "",
+      "reviews": [],
+      "followers": [],
+      "tasksMentored": ["task06"]
+    },
+    {
+      "id": "mentor07",
+      "name": "Ava King",
+      "expertise": "Cloud Architect",
+      "imageUrl": "",
+      "reviews": [],
+      "followers": [],
+      "tasksMentored": ["task07"]
+    },
+    {
+      "id": "mentor08",
+      "name": "Lucas Hill",
+      "expertise": "Game Developer",
+      "imageUrl": "",
+      "reviews": [],
+      "followers": [],
+      "tasksMentored": ["task08"]
+    },
+    {
+      "id": "mentor09",
+      "name": "Liam Adams",
+      "expertise": "Embedded Systems Engineer",
+      "imageUrl": "",
+      "reviews": [],
+      "followers": [],
+      "tasksMentored": ["task09"]
+    },
+    {
+      "id": "mentor10",
+      "name": "Olivia Bennett",
+      "expertise": "Data Scientist",
+      "imageUrl": "",
+      "reviews": [],
+      "followers": [],
+      "tasksMentored": ["task10"]
+    },
+    {
+      "id": "mentor11",
+      "name": "Nathan Cooper",
+      "expertise": "DevOps Engineer",
+      "imageUrl": "",
+      "reviews": [],
+      "followers": [],
+      "tasksMentored": ["task11"]
+    },
+    {
+      "id": "mentor12",
+      "name": "Samantha Peterson",
+      "expertise": "Product Manager",
+      "imageUrl": "",
+      "reviews": [],
+      "followers": [],
+      "tasksMentored": ["task12"]
+    },
+    {
+      "id": "mentor13",
+      "name": "Andrew Mitchell",
+      "expertise": "UI/UX Designer",
+      "imageUrl": "",
+      "reviews": [],
+      "followers": [],
+      "tasksMentored": ["task13"]
+    },
+    {
+      "id": "mentor14",
+      "name": "Isabella Collins",
+      "expertise": "Blockchain Engineer",
+      "imageUrl": "",
+      "reviews": [],
+      "followers": [],
+      "tasksMentored": ["task14"]
+    },
+    {
+      "id": "mentor15",
+      "name": "Mason Carter",
+      "expertise": "Software Engineer",
+      "imageUrl": "",
+      "reviews": [],
+      "followers": [],
+      "tasksMentored": ["task15"]
+    },
+    {
+      "id": "mentor16",
+      "name": "Emma Murphy",
+      "expertise": "QA Engineer",
+      "imageUrl": "",
+      "reviews": [],
+      "followers": [],
+      "tasksMentored": ["task16"]
+    },
+    {
+      "id": "mentor17",
+      "name": "Noah Richardson",
+      "expertise": "Security Analyst",
+      "imageUrl": "",
+      "reviews": [],
+      "followers": [],
+      "tasksMentored": ["task17"]
+    },
+    {
+      "id": "mentor18",
+      "name": "Sophia Watson",
+      "expertise": "Mobile App Developer",
+      "imageUrl": "",
+      "reviews": [],
+      "followers": [],
+      "tasksMentored": ["task18"]
+    },
+    {
+      "id": "mentor19",
+      "name": "William Evans",
+      "expertise": "Data Analyst",
+      "imageUrl": "",
+      "reviews": [],
+      "followers": [],
+      "tasksMentored": ["task19"]
+    },
+    {
+      "id": "mentor20",
+      "name": "Charlotte Phillips",
+      "expertise": "Project Manager",
+      "imageUrl": "",
+      "reviews": [],
+      "followers": [],
+      "tasksMentored": ["task20"]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "task01",
+      "title": "Design a Landing Page",
+      "category": "UI/UX Design",
+      "progress": 25,
+      "dueDate": "2025-02-19T16:00:00Z",
+      "createdAt": "2025-02-15T16:01:00Z",
+      "assignee": "user01",
+      "mentors": ["mentor01", "mentor02", "mentor03"],
+      "media": [
+        {
+          "mediaType": "image",
+          "mediaUrl": "https://cdn.dribbble.com/userupload/10200859/file/original-68d924d7391a23f550caa12053fe4b80.png"
+        }
+      ]
+    },
+    {
+      "id": "task02",
+      "title": "Build a React Dashboard",
+      "category": "Front End Development",
+      "progress": 40,
+      "dueDate": "2025-02-19T17:00:00Z",
+      "createdAt": "2025-02-15T16:02:00Z",
+      "assignee": "user02",
+      "mentors": ["mentor02"],
+      "media": [
+        {
+          "mediaType": "image",
+          "mediaUrl": "https://cdn.dribbble.com/userupload/18415615/file/original-d881fd064d90adfc18f6cb20fd3ee16e.webp"
+        }
+      ]
+    },
+    {
+      "id": "task03",
+      "title": "Set Up a CI/CD Pipeline",
+      "category": "DevOps",
+      "progress": 10,
+      "dueDate": "2025-02-19T18:00:00Z",
+      "createdAt": "2025-02-15T16:03:00Z",
+      "assignee": "user03",
+      "mentors": ["mentor03"],
+      "media": []
+    },
+    {
+      "id": "task04",
+      "title": "Develop an AI Chatbot",
+      "category": "AI Development",
+      "progress": 15,
+      "dueDate": "2025-02-20T16:00:00Z",
+      "createdAt": "2025-02-15T16:04:00Z",
+      "assignee": "user04",
+      "mentors": ["mentor04"],
+      "media": []
+    },
+    {
+      "id": "task05",
+      "title": "Create a Portfolio Website",
+      "category": "Web Development",
+      "progress": 50,
+      "dueDate": "2025-02-22T16:00:00Z",
+      "createdAt": "2025-02-15T16:05:00Z",
+      "assignee": "user05",
+      "mentors": ["mentor05"],
+      "media": [
+        {
+          "mediaType": "image",
+          "mediaUrl": "https://cdn.dribbble.com/userupload/16665010/file/original-dddcde960009d83916f3afe7f2d399b1.png"
+        }
+      ]
+    },
+    {
+      "id": "task06",
+      "title": "Build an E-commerce Backend",
+      "category": "Backend Development",
+      "progress": 35,
+      "dueDate": "2025-02-23T16:00:00Z",
+      "createdAt": "2025-02-15T16:06:00Z",
+      "assignee": "user06",
+      "mentors": ["mentor06"],
+      "media": []
+    },
+    {
+      "id": "task07",
+      "title": "Implement a Blockchain Ledger",
+      "category": "Blockchain",
+      "progress": 20,
+      "dueDate": "2025-02-22T16:00:00Z",
+      "createdAt": "2025-02-15T16:07:00Z",
+      "assignee": "user07",
+      "mentors": ["mentor07"],
+      "media": []
+    },
+    {
+      "id": "task08",
+      "title": "Develop a Mobile Shopping App",
+      "category": "Mobile Development",
+      "progress": 30,
+      "dueDate": "2025-02-23T16:00:00Z",
+      "createdAt": "2025-02-15T16:08:00Z",
+      "assignee": "user08",
+      "mentors": ["mentor08"],
+      "media": [
+        {
+          "mediaType": "image",
+          "mediaUrl": "https://cdn.dribbble.com/userupload/16199279/file/original-0c59436c8a5111f890a6dc8bbdfc655d.png"
+        }
+      ]
+    },
+    {
+      "id": "task09",
+      "title": "Analyze Sales Data",
+      "category": "Data Science",
+      "progress": 60,
+      "dueDate": "2025-02-23T16:00:00Z",
+      "createdAt": "2025-02-15T16:09:00Z",
+      "assignee": "user09",
+      "mentors": ["mentor09"],
+      "media": []
+    },
+    {
+      "id": "task10",
+      "title": "Build a CMS with Next.js",
+      "category": "Web Development",
+      "progress": 45,
+      "dueDate": "2025-02-23T16:00:00Z",
+      "createdAt": "2025-02-15T16:10:00Z",
+      "assignee": "user10",
+      "mentors": ["mentor10"],
+      "media": []
+    },
+    {
+      "id": "task11",
+      "title": "Conduct Security Audit",
+      "category": "Cybersecurity",
+      "progress": 20,
+      "dueDate": "2025-02-23T16:00:00Z",
+      "createdAt": "2025-02-15T16:11:00Z",
+      "assignee": "user11",
+      "mentors": ["mentor11"],
+      "media": []
+    },
+    {
+      "id": "task12",
+      "title": "Create a Game with Unity",
+      "category": "Game Development",
+      "progress": 35,
+      "dueDate": "2025-02-23T16:00:00Z",
+      "createdAt": "2025-02-15T16:12:00Z",
+      "assignee": "user12",
+      "mentors": ["mentor12"],
+      "media": []
+    },
+    {
+      "id": "task13",
+      "title": "Optimize SQL Queries",
+      "category": "Database Management",
+      "progress": 50,
+      "dueDate": "2025-02-23T16:00:00Z",
+      "createdAt": "2025-02-15T16:13:00Z",
+      "assignee": "user13",
+      "mentors": ["mentor13"],
+      "media": []
+    },
+    {
+      "id": "task14",
+      "title": "Migrate Infrastructure to Cloud",
+      "category": "Cloud Computing",
+      "progress": 40,
+      "dueDate": "2025-02-23T16:00:00Z",
+      "createdAt": "2025-02-15T16:14:00Z",
+      "assignee": "user14",
+      "mentors": ["mentor14"],
+      "media": []
+    },
+    {
+      "id": "task15",
+      "title": "Automate API Testing",
+      "category": "QA Engineering",
+      "progress": 30,
+      "dueDate": "2025-02-23T16:00:00Z",
+      "createdAt": "2025-02-15T16:15:00Z",
+      "assignee": "user15",
+      "mentors": ["mentor15"],
+      "media": []
+    },
+    {
+      "id": "task16",
+      "title": "Redesign an Existing Website",
+      "category": "UI/UX Design",
+      "progress": 20,
+      "dueDate": "2025-02-23T16:00:00Z",
+      "createdAt": "2025-02-15T16:16:00Z",
+      "assignee": "user16",
+      "mentors": ["mentor16"],
+      "media": []
+    },
+    {
+      "id": "task17",
+      "title": "Build a Smart Home App",
+      "category": "IoT Development",
+      "progress": 15,
+      "dueDate": "2025-02-23T16:00:00Z",
+      "createdAt": "2025-02-15T16:17:00Z",
+      "assignee": "user17",
+      "mentors": ["mentor17"],
+      "media": []
+    },
+    {
+      "id": "task18",
+      "title": "Develop a Voice Assistant",
+      "category": "AI Development",
+      "progress": 25,
+      "dueDate": "2025-02-23T16:00:00Z",
+      "createdAt": "2025-02-20T16:18:00Z",
+      "assignee": "user18",
+      "mentors": ["mentor18"],
+      "media": []
+    },
+    {
+      "id": "task19",
+      "title": "Create a Financial Dashboard",
+      "category": "Data Analytics",
+      "progress": 55,
+      "dueDate": "2025-02-23T17:00:00Z",
+      "createdAt": "2025-02-20T16:19:00Z",
+      "assignee": "user19",
+      "mentors": ["mentor19"],
+      "media": []
+    },
+    {
+      "id": "task20",
+      "title": "Design an E-learning Platform",
+      "category": "EdTech",
+      "progress": 45,
+      "dueDate": "2025-02-23T14:00:00Z",
+      "createdAt": "2025-02-20T16:20:00Z",
+      "assignee": "user20",
+      "mentors": ["mentor20"],
+      "media": []
+    }
+  ]
+}

@@ -1,25 +1,37 @@
 import LinearProgress from '@mui/material/LinearProgress';
 import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined';
-import { tasks } from '../../assets/assets';
 import ImageContainer from '../common/ImageContainer';
+import PropTypes from 'prop-types';
+import { getPendingTime } from '../../utils/dateFormat';
 
-const Task = () => {
+const Task = ({ task }) => {
+  const pendingTime = getPendingTime(task.dueDate);
+
   return (
     <div className="p-6 rounded-[10px] bg-white flex flex-col gap-4">
-      <img src={tasks.task1} alt="" className="h-auto w-full rounded-[10px]" />
+      {task?.media?.length > 0
+        ? task.media.map((item, index) => {
+            return (
+              <img
+                src={item.mediaUrl}
+                alt=""
+                className="h-auto w-full rounded-[10px]"
+                key={index}
+              />
+            );
+          })
+        : null}
       <div>
-        <p className="font-semibold text-[#141522] text-base">
-          Creating Mobile App Design
-        </p>
-        <p className="font-medium text-[#54577A] text-sm">UI UX Design</p>
+        <p className="font-semibold text-[#141522] text-base">{task.title}</p>
+        <p className="font-medium text-[#54577A] text-sm">{task.category}</p>
       </div>
-      <div>
+      <div className="flex justify-between">
         <p className="font-medium text-[#141522] text-base">Progress</p>
-        <p className="font-medium text-[#54577A] text-base">75%</p>
+        <p className="font-medium text-[#54577A] text-base">{task.progress}%</p>
       </div>
       <LinearProgress
         variant="determinate"
-        value={60}
+        value={task.progress}
         size="lg"
         thickness={2}
         style={{
@@ -34,14 +46,18 @@ const Task = () => {
               color: '#54577A',
             }}
           />
-          <p className="font-medium text-[#141522] text-base">3 Days Left</p>
+          <p className="font-medium text-[#141522] text-base">{pendingTime}</p>
         </div>
         <div className="relative right-0">
-          <ImageContainer />
+          <ImageContainer assignee={task.assignee} />
         </div>
       </div>
     </div>
   );
+};
+
+Task.propTypes = {
+  task: PropTypes.object.isRequired,
 };
 
 export default Task;

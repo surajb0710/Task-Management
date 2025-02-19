@@ -2,12 +2,12 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { useRef } from 'react';
-// import data from '../../data.js';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Task from '../cards/Task';
+import PropTypes from 'prop-types';
 
-const AwardsRecognitions = () => {
+const AllTasks = ({ allTasks }) => {
   const settings = {
     dots: false,
     arrows: false,
@@ -55,18 +55,14 @@ const AwardsRecognitions = () => {
       <div className="">
         <div className="slider-container w-[calc(100vw-335px)]">
           <Slider ref={sliderRef} {...settings} className="">
-            <div className="px-4">
-              <Task />
-            </div>
-            <div className="px-4">
-              <Task />
-            </div>
-            <div className="px-4">
-              <Task />
-            </div>
-            <div className="px-4">
-              <Task />
-            </div>
+            {allTasks.length !== 0 &&
+              allTasks.map((task, index) => {
+                return (
+                  <div className="px-4" key={index}>
+                    <Task task={task} />
+                  </div>
+                );
+              })}
           </Slider>
         </div>
       </div>
@@ -74,4 +70,8 @@ const AwardsRecognitions = () => {
   );
 };
 
-export default AwardsRecognitions;
+AllTasks.propTypes = {
+  allTasks: PropTypes.array.isRequired,
+};
+
+export default AllTasks;

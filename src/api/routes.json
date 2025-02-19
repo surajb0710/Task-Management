@@ -1,0 +1,6 @@
+{
+  "/api/users": "/users",
+  "/api/mentors": "/mentors",
+  "/api/tasks": "/tasks",
+  "/api/tasks/:id": "/tasks/:id"
+}

@@ -6,8 +6,9 @@ import { useRef } from 'react';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Task from '../cards/Task';
+import PropTypes from 'prop-types';
 
-const AwardsRecognitions = () => {
+const TimeLimit = ({ todaysTasks }) => {
   const settings = {
     dots: false,
     arrows: false,
@@ -55,18 +56,14 @@ const AwardsRecognitions = () => {
       <div className="">
         <div className="slider-container w-[calc(100vw-335px)]">
           <Slider ref={sliderRef} {...settings} className="">
-            <div className="px-4">
-              <Task />
-            </div>
-            <div className="px-4">
-              <Task />
-            </div>
-            <div className="px-4">
-              <Task />
-            </div>
-            <div className="px-4">
-              <Task />
-            </div>
+            {todaysTasks.length !== 0 &&
+              todaysTasks.map((task, index) => {
+                return (
+                  <div className="px-4" key={index}>
+                    <Task task={task} />
+                  </div>
+                );
+              })}
           </Slider>
         </div>
       </div>
@@ -74,4 +71,8 @@ const AwardsRecognitions = () => {
   );
 };
 
-export default AwardsRecognitions;
+TimeLimit.propTypes = {
+  todaysTasks: PropTypes.array.isRequired,
+};
+
+export default TimeLimit;

@@ -6,8 +6,9 @@ import { useRef } from 'react';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Mentor from '../cards/Mentor';
+import PropTypes from 'prop-types';
 
-const RecentMentors = () => {
+const RecentMentors = ({ recentMentors }) => {
   const settings = {
     dots: false,
     arrows: false,
@@ -55,23 +56,20 @@ const RecentMentors = () => {
       <div className="">
         <div className="slider-container w-[calc(100vw-303px)]">
           <Slider ref={sliderRef} {...settings} className="">
-            <div className="px-4">
-              <Mentor />
-            </div>
-            <div className="px-4">
-              <Mentor />
-            </div>
-            <div className="px-4">
-              <Mentor />
-            </div>
-            <div className="px-4">
-              <Mentor />
-            </div>
+            {recentMentors.map((mentor, index) => (
+              <div className="px-4" key={index}>
+                <Mentor mentor={mentor} comments={false} />
+              </div>
+            ))}
           </Slider>
         </div>
       </div>
     </section>
   );
+};
+
+RecentMentors.propTypes = {
+  recentMentors: PropTypes.array.isRequired,
 };
 
 export default RecentMentors;

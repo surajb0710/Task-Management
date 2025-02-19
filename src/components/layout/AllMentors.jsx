@@ -1,6 +1,8 @@
 import Mentor from '../cards/Mentor';
+import PropTypes from 'prop-types';
 
-const AllMentors = () => {
+const AllMentors = ({ allMentors }) => {
+  // console.log('----all Mentors----', allMentors);
   return (
     <section className="px-4">
       <div className="flex justify-between">
@@ -9,19 +11,16 @@ const AllMentors = () => {
         </p>
       </div>
       <div className="grid grid-cols-3 gap-8">
-        <Mentor />
-        <Mentor />
-        <Mentor />
-        <Mentor />
-        <Mentor />
-        <Mentor />
-        <Mentor />
-        <Mentor />
-        <Mentor />
-        <Mentor />
+        {allMentors.map((mentor, index) => (
+          <Mentor key={index} mentor={mentor} />
+        ))}
       </div>
     </section>
   );
+};
+
+AllMentors.propTypes = {
+  allMentors: PropTypes.array.isRequired,
 };
 
 export default AllMentors;
