@@ -126,6 +126,31 @@ export const addMentor = async (mentor) => {
 
 //-----------Tasks-----------//
 
+export const addTaskApi = async (task) => {
+  const url = '/tasks';
+
+  try {
+    const response = await fetch(import.meta.env.VITE_BASE_URL + url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(task),
+    });
+
+    if (!response.ok) {
+      throw new Error(`Failed to create post: ${response.statusText}`);
+    }
+
+    const newTask = await response.json();
+    console.log('Task added successfully:', newTask);
+    return newTask;
+  } catch (error) {
+    console.error('Error adding task:', error);
+    throw error;
+  }
+};
+
 export const getAllTasksApi = async () => {
   const url = `/tasks`;
 

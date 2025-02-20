@@ -8,13 +8,19 @@ import Mentors from './pages/Mentors';
 import Messages from './pages/Messages';
 import Tasks from './pages/Tasks';
 import { useLocation } from 'react-router-dom';
+import AddTask from './components/forms/AddTask';
+import { useState } from 'react';
 
 const Layout = () => {
   const location = useLocation();
+  const [showAddTaskModel, setShowAddTaskModel] = useState(true);
 
   return (
     <div className="bg-[#F5F5F7] flex max-w-screen">
-      <Sidebar />
+      <Sidebar setShowAddTaskModel={setShowAddTaskModel} />
+      {showAddTaskModel && (
+        <AddTask setShowAddTaskModel={setShowAddTaskModel} />
+      )}
       <div className="grow ml-[254px]">
         {location.pathname !== '/' && <Header />}
         <div className="">

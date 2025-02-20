@@ -1,8 +1,9 @@
 import { Link, useLocation } from 'react-router-dom';
 import { sidebar } from '../assets/assets';
 import AddCircleOutlineOutlinedIcon from '@mui/icons-material/AddCircleOutlineOutlined';
+import PropTypes from 'prop-types';
 
-const Sidebar = () => {
+const Sidebar = ({ setShowAddTaskModel }) => {
   const location = useLocation();
 
   return (
@@ -62,7 +63,9 @@ const Sidebar = () => {
                 Task
               </p>
             </div>
-            <AddCircleOutlineOutlinedIcon />
+            <div onClick={() => setShowAddTaskModel(true)}>
+              <AddCircleOutlineOutlinedIcon />
+            </div>
           </li>
         </Link>
         <Link to="/mentors">
@@ -144,6 +147,10 @@ const Sidebar = () => {
       <div></div>
     </div>
   );
+};
+
+Sidebar.propTypes = {
+  setShowAddTaskModel: PropTypes.func.isRequired,
 };
 
 export default Sidebar;
