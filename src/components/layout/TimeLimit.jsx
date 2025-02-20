@@ -5,13 +5,11 @@ import { useRef, useState, useEffect } from 'react';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Task from '../cards/Task';
-import PropTypes from 'prop-types';
 import { getTodaysTasksApi } from '../../api/apiService';
 
 const TimeLimit = () => {
   const [todaysTasks, setTodaysTasks] = useState([]);
-
-  const slidesToShow = todaysTasks.length <= 3 ? todaysTasks.length : 3;
+  const [slidesToShow, setSlidesToShow] = useState(3);
 
   useEffect(() => {
     const fetchTasks = async () => {
@@ -22,7 +20,9 @@ const TimeLimit = () => {
       ).padStart(2, '0')}-${date.getDate()}`;
       const tasks = await getTodaysTasksApi(todaysDate);
       setTodaysTasks(tasks);
-      console.log('----------todays tasks------', tasks[0]);
+
+      const slidesToShow = tasks.length <= 3 ? tasks.length : 3;
+      setSlidesToShow(slidesToShow);
     };
     fetchTasks();
   }, []);
@@ -32,22 +32,8 @@ const TimeLimit = () => {
     arrows: false,
     infinite: true,
     speed: 500,
-    slidesToShow: { slidesToShow },
+    slidesToShow: slidesToShow,
     slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1080,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
   };
 
   const sliderRef = useRef(null);
@@ -66,15 +52,10 @@ const TimeLimit = () => {
         <p className="text-2xl font-semibold leading-[1.5] text-[#141522] mb-[18px]">
           Time Limit
         </p>
-        {todaysTasks.length > 3 && (
-          <div className="flex">
-            <ArrowBackIosIcon onClick={goToPrev} className="cursor-pointer" />
-            <ArrowForwardIosIcon
-              onClick={goToNext}
-              className="cursor-pointer"
-            />
-          </div>
-        )}
+        <div className="flex">
+          <ArrowBackIosIcon onClick={goToPrev} className="cursor-pointer" />
+          <ArrowForwardIosIcon onClick={goToNext} className="cursor-pointer" />
+        </div>
       </div>
       <div className="">
         <div className="slider-container w-[calc(100vw-335px)]">
@@ -92,10 +73,6 @@ const TimeLimit = () => {
       </div>
     </section>
   );
-};
-
-TimeLimit.propTypes = {
-  todaysTasks: PropTypes.array.isRequired,
 };
 
 export default TimeLimit;
