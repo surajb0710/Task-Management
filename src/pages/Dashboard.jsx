@@ -2,13 +2,24 @@ import Header from '../components/Header';
 import Calendar from '../components/Calendar';
 import TaskToday from '../components/layout/TaskToday';
 import RunningTask from '../components/cards/RunningTask';
-import Mentor from '../components/cards/Mentor';
-import UpcomingTask from '../components/cards/Task';
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+
 import Chart from '../components/cards/Chart';
+import { useState, useEffect } from 'react';
+import { getMonthlyMentorsApi } from '../api/apiService';
+import MonthlyMentors from '../components/layout/MonthlyMentors';
+import UpcomingTask from '../components/layout/UpcomingTask';
 
 const Dashboard = () => {
+  const [monthlyMentors, setMonthlyMentors] = useState([]);
+
+  useEffect(() => {
+    const fetchMentors = async () => {
+      const mentors = await getMonthlyMentorsApi();
+      setMonthlyMentors(mentors);
+    };
+    fetchMentors();
+  }, []);
+
   return (
     <div className="flex">
       <div className="grow bg-[#FAFAFA]">
@@ -18,36 +29,10 @@ const Dashboard = () => {
           <Chart />
         </div>
         <div className="px-8 mb-8">
-          <div className="flex justify-between mb-5">
-            <p className="text-2xl font-semibold text-[#141522]">
-              Monthly Mentors
-            </p>
-            <div className="flex gap-2.5">
-              <ArrowBackIosIcon />
-              <ArrowForwardIosIcon />
-            </div>
-          </div>
-          <div className="flex gap-8">
-            <Mentor />
-            <Mentor />
-          </div>
+          <MonthlyMentors monthlyMentors={monthlyMentors} />
         </div>
         <div className="px-8 mb-8">
-          <div className="">
-            <div className="flex justify-between mb-5">
-              <p className="text-2xl font-semibold text-[#141522]">
-                Upcoming Task
-              </p>
-              <div className="flex gap-2.5">
-                <ArrowBackIosIcon />
-                <ArrowForwardIosIcon />
-              </div>
-            </div>
-            <div className="flex gap-8">
-              <UpcomingTask />
-              <UpcomingTask />
-            </div>
-          </div>
+          <UpcomingTask />
         </div>
       </div>
       <div className="flex flex-col gap-8 p-6 shrink-0">

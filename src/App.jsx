@@ -13,7 +13,7 @@ const Layout = () => {
   const location = useLocation();
 
   return (
-    <div className="bg-[#F5F5F7] flex">
+    <div className="bg-[#F5F5F7] flex max-w-screen">
       <Sidebar />
       <div className="grow ml-[254px]">
         {location.pathname !== '/' && <Header />}

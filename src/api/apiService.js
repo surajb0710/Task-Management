@@ -53,6 +53,28 @@ export const getRecentMentorsApi = async () => {
   }
 };
 
+export const getMonthlyMentorsApi = async () => {
+  const today = new Date();
+  const lastMonth = new Date();
+  lastMonth.setMonth(lastMonth.getMonth() - 1); // Move back 1 month
+
+  try {
+    const allMentors = await getAllMentorsApi(); // Fetch all mentors
+
+    const mentorsWithRecentReviews = allMentors.filter((mentor) => {
+      return mentor.reviews.some((review) => {
+        const reviewDate = new Date(review.createdAt);
+        return reviewDate >= lastMonth && reviewDate <= today;
+      });
+    });
+
+    return mentorsWithRecentReviews;
+  } catch (error) {
+    console.error('Error fetching mentors:', error);
+    throw error;
+  }
+};
+
 export const getMentorByIdApi = async (id) => {
   const url = `/mentors/${id}`;
 

@@ -1,14 +1,33 @@
-import UpcomingTask from '../cards/Task';
+import Task from '../cards/Task';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+import { getTodaysTasksApi } from '../../api/apiService';
+import { useState, useEffect } from 'react';
 
 const TaskToday = () => {
+  const [todaysTask, setTodaysTask] = useState({});
+
+  useEffect(() => {
+    const fetchTasks = async () => {
+      const date = new Date();
+
+      const todaysDate = `${date.getFullYear()}-${String(
+        date.getUTCMonth() + 1
+      ).padStart(2, '0')}-${date.getDate()}`;
+      const tasks = await getTodaysTasksApi(todaysDate);
+      setTodaysTask(tasks[0]);
+    };
+    fetchTasks();
+  }, []);
+
+  console.log('----------todays task------', todaysTask);
+
   return (
     <div className="max-w-[372px] p-6 bg-white rounded-[10px]">
       <div className="flex justify-between mb-5">
         <p>Task Today</p>
         <MoreHorizIcon />
       </div>
-      <UpcomingTask />
+      {todaysTask.id !== '' && <Task task={todaysTask} />}
       <hr />
       <div className="mt-8">
         <div className="flex justify-between mb-5">

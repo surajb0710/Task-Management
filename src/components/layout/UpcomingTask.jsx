@@ -7,7 +7,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Task from '../cards/Task';
 import { getAllTasksApi } from '../../api/apiService';
 
-const AllTasks = () => {
+const UpcomingTask = () => {
   const [allTasks, setAllTasks] = useState([]);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const AllTasks = () => {
     arrows: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 2,
     slidesToScroll: 1,
     responsive: [
       {
@@ -53,9 +53,9 @@ const AllTasks = () => {
 
   return (
     <section className="">
-      <div className="flex justify-between">
+      <div className="flex justify-between px-4">
         <p className="text-2xl font-semibold leading-[1.5] text-[#141522] mb-[18px]">
-          New Tasks
+          Upcoming Tasks
         </p>
         <div className="flex">
           <ArrowBackIosIcon onClick={goToPrev} className="cursor-pointer" />
@@ -63,7 +63,7 @@ const AllTasks = () => {
         </div>
       </div>
       <div className="">
-        <div className="slider-container w-[calc(100vw-335px)]">
+        <div className="slider-container w-[calc(100vw-755px)]">
           <Slider ref={sliderRef} {...settings} className="">
             {allTasks.length !== 0 &&
               allTasks.map((task, index) => {
@@ -80,4 +80,4 @@ const AllTasks = () => {
   );
 };
 
-export default AllTasks;
+export default UpcomingTask;

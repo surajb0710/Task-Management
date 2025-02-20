@@ -31,7 +31,7 @@ const Task = ({ task }) => {
       </div>
       <LinearProgress
         variant="determinate"
-        value={task.progress}
+        value={task.progress === undefined ? 0 : task.progress}
         size="lg"
         thickness={2}
         style={{
@@ -48,9 +48,11 @@ const Task = ({ task }) => {
           />
           <p className="font-medium text-[#141522] text-base">{pendingTime}</p>
         </div>
-        <div className="relative right-0">
-          <ImageContainer assignee={task.assignee} />
-        </div>
+        {task?.assignee != undefined ? (
+          <div className="relative right-0">
+            <ImageContainer assignee={task.assignee} />
+          </div>
+        ) : null}
       </div>
     </div>
   );

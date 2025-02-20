@@ -2,7 +2,6 @@ import Mentor from '../cards/Mentor';
 import PropTypes from 'prop-types';
 
 const AllMentors = ({ allMentors }) => {
-  // console.log('----all Mentors----', allMentors);
   return (
     <section className="px-4">
       <div className="flex justify-between">

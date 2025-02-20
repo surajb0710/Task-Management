@@ -1,20 +1,38 @@
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { useRef } from 'react';
-// import data from '../../data.js';
+import { useRef, useState, useEffect } from 'react';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Task from '../cards/Task';
 import PropTypes from 'prop-types';
+import { getTodaysTasksApi } from '../../api/apiService';
 
-const TimeLimit = ({ todaysTasks }) => {
+const TimeLimit = () => {
+  const [todaysTasks, setTodaysTasks] = useState([]);
+
+  const slidesToShow = todaysTasks.length <= 3 ? todaysTasks.length : 3;
+
+  useEffect(() => {
+    const fetchTasks = async () => {
+      const date = new Date();
+
+      const todaysDate = `${date.getFullYear()}-${String(
+        date.getUTCMonth() + 1
+      ).padStart(2, '0')}-${date.getDate()}`;
+      const tasks = await getTodaysTasksApi(todaysDate);
+      setTodaysTasks(tasks);
+      console.log('----------todays tasks------', tasks[0]);
+    };
+    fetchTasks();
+  }, []);
+
   const settings = {
     dots: false,
     arrows: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: { slidesToShow },
     slidesToScroll: 1,
     responsive: [
       {
@@ -48,10 +66,15 @@ const TimeLimit = ({ todaysTasks }) => {
         <p className="text-2xl font-semibold leading-[1.5] text-[#141522] mb-[18px]">
           Time Limit
         </p>
-        <div className="flex">
-          <ArrowBackIosIcon onClick={goToPrev} className="cursor-pointer" />
-          <ArrowForwardIosIcon onClick={goToNext} className="cursor-pointer" />
-        </div>
+        {todaysTasks.length > 3 && (
+          <div className="flex">
+            <ArrowBackIosIcon onClick={goToPrev} className="cursor-pointer" />
+            <ArrowForwardIosIcon
+              onClick={goToNext}
+              className="cursor-pointer"
+            />
+          </div>
+        )}
       </div>
       <div className="">
         <div className="slider-container w-[calc(100vw-335px)]">

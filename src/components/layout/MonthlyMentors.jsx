@@ -1,29 +1,19 @@
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { useRef, useState, useEffect } from 'react';
+import { useRef } from 'react';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import Task from '../cards/Task';
-import { getAllTasksApi } from '../../api/apiService';
+import Mentor from '../cards/Mentor';
+import PropTypes from 'prop-types';
 
-const AllTasks = () => {
-  const [allTasks, setAllTasks] = useState([]);
-
-  useEffect(() => {
-    const fetchTasks = async () => {
-      const tasks = await getAllTasksApi();
-      setAllTasks(tasks);
-    };
-    fetchTasks();
-  }, []);
-
+const MonthlyMentors = ({ monthlyMentors }) => {
   const settings = {
     dots: false,
     arrows: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 2,
     slidesToScroll: 1,
     responsive: [
       {
@@ -53,9 +43,9 @@ const AllTasks = () => {
 
   return (
     <section className="">
-      <div className="flex justify-between">
+      <div className="flex justify-between px-4">
         <p className="text-2xl font-semibold leading-[1.5] text-[#141522] mb-[18px]">
-          New Tasks
+          Monthly Mentors
         </p>
         <div className="flex">
           <ArrowBackIosIcon onClick={goToPrev} className="cursor-pointer" />
@@ -63,16 +53,13 @@ const AllTasks = () => {
         </div>
       </div>
       <div className="">
-        <div className="slider-container w-[calc(100vw-335px)]">
+        <div className="slider-container w-[calc(100vw-755px)]">
           <Slider ref={sliderRef} {...settings} className="">
-            {allTasks.length !== 0 &&
-              allTasks.map((task, index) => {
-                return (
-                  <div className="px-4" key={index}>
-                    <Task task={task} />
-                  </div>
-                );
-              })}
+            {monthlyMentors.map((mentor, index) => (
+              <div className="px-4" key={index}>
+                <Mentor mentor={mentor} comments={false} />
+              </div>
+            ))}
           </Slider>
         </div>
       </div>
@@ -80,4 +67,8 @@ const AllTasks = () => {
   );
 };
 
-export default AllTasks;
+MonthlyMentors.propTypes = {
+  monthlyMentors: PropTypes.array.isRequired,
+};
+
+export default MonthlyMentors;
