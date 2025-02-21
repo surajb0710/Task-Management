@@ -2,6 +2,7 @@ import Header from '../components/Header';
 import Calendar from '../components/Calendar';
 import TaskToday from '../components/layout/TaskToday';
 import RunningTask from '../components/cards/RunningTask';
+import { getTasks } from '../firebase/firestore';
 
 import Chart from '../components/cards/Chart';
 import { useState, useEffect } from 'react';
@@ -18,6 +19,16 @@ const Dashboard = () => {
       setMonthlyMentors(mentors);
     };
     fetchMentors();
+  }, []);
+
+  useEffect(() => {
+    const fetchTasks = async () => {
+      const data = await getTasks();
+
+      console.log('--Data--', data);
+    };
+
+    fetchTasks();
   }, []);
 
   return (

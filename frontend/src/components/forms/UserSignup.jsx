@@ -4,9 +4,11 @@ import { useState, useEffect, useMemo } from 'react';
 import { addMentor } from '../../api/apiService';
 import MultiSelectDropdown from './components/MultiSelectDropdown';
 import FileUploader from './components/FileUploader';
+import { useNavigate } from 'react-router-dom';
 
-const MentorSignup = () => {
+const UserSignup = () => {
   const [selectedExpertise, setSelectedExpertise] = useState([]);
+  const navigate = useNavigate();
 
   const initialValues = useMemo(
     () => ({
@@ -37,6 +39,7 @@ const MentorSignup = () => {
       try {
         await addMentor(values);
         resetForm();
+        navigate('/');
       } catch (e) {
         console.log('Error : ', e);
       }
@@ -73,9 +76,7 @@ const MentorSignup = () => {
         </div>
 
         <div className="flex-1">
-          <label htmlFor="expertise" className="block mb-2">
-            Expertise
-          </label>
+          <p className="block mb-2">Expertise</p>
           <div>
             <MultiSelectDropdown setMethod={setSelectedExpertise} />
           </div>
@@ -95,4 +96,4 @@ const MentorSignup = () => {
   );
 };
 
-export default MentorSignup;
+export default UserSignup;

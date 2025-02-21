@@ -77,15 +77,15 @@ export default function Settings() {
             </div>
             <div className="mb-8">
               <label
-                htmlFor="language"
+                htmlFor="timezone"
                 className="mb-4 block font-semibold text-sm text-[#141522]"
               >
                 Timezone
               </label>
               <div className="px-5 py-4 w-100 flex justify-between border border-[#F5F5F7] rounded-[10px]">
                 <select
-                  name="language"
-                  id="language"
+                  name="timezone"
+                  id="timezone"
                   defaultValue="English"
                   onClick={handleLanguageChange}
                   className="w-full"
@@ -98,10 +98,7 @@ export default function Settings() {
               </div>
             </div>
             <div className="mb-16">
-              <label
-                htmlFor="language"
-                className="mb-4 block font-semibold text-sm text-[#141522]"
-              >
+              <label className="mb-4 block font-semibold text-sm text-[#141522]">
                 Timezone
               </label>
               <div className="flex gap-8">

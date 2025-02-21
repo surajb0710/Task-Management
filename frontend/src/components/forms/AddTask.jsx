@@ -164,9 +164,7 @@ const AddTask = ({ setShowAddTaskModel }) => {
           </div>
         </div>
         <div className="flex-1">
-          <label htmlFor="assignee" className="block mb-2">
-            Mentors
-          </label>
+          <label className="block mb-2">Mentors</label>
           <div>
             <MultiSelectDropdown setSelectedMentors={setSelectedMentors} />
           </div>
