@@ -7,22 +7,27 @@ import Dashboard from './pages/Dashboard';
 import Mentors from './pages/Mentors';
 import Messages from './pages/Messages';
 import Tasks from './pages/Tasks';
+import SignUp from './pages/SignUp';
 import { useLocation } from 'react-router-dom';
 import AddTask from './components/forms/AddTask';
 import { useState } from 'react';
 
 const Layout = () => {
   const location = useLocation();
-  const [showAddTaskModel, setShowAddTaskModel] = useState(true);
+  const [showAddTaskModel, setShowAddTaskModel] = useState(false);
 
   return (
     <div className="bg-[#F5F5F7] flex max-w-screen">
-      <Sidebar setShowAddTaskModel={setShowAddTaskModel} />
+      {location.pathname !== '/signup' && (
+        <Sidebar setShowAddTaskModel={setShowAddTaskModel} />
+      )}
       {showAddTaskModel && (
         <AddTask setShowAddTaskModel={setShowAddTaskModel} />
       )}
-      <div className="grow ml-[254px]">
-        {location.pathname !== '/' && <Header />}
+      <div className="grow">
+        {location.pathname !== '/' && location.pathname !== '/signup' && (
+          <Header />
+        )}
         <div className="">
           <Routes>
             <Route path="/" element={<Dashboard />} />
@@ -30,6 +35,7 @@ const Layout = () => {
             <Route path="/messages" element={<Messages />} />
             <Route path="/tasks" element={<Tasks />} />
             <Route path="/settings" element={<Settings />} />
+            <Route path="/signup" element={<SignUp />} />
           </Routes>
         </div>
       </div>

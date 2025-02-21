@@ -4,7 +4,7 @@ import MessageInbox from '../components/layout/MessageInbox';
 
 const Messages = () => {
   return (
-    <div className="flex bg-white">
+    <div className="flex bg-white ml-[254px]">
       <div className="p-6">
         <div className="flex px-7 py-[14px] w-[352px] mb-8 sticky">
           <input

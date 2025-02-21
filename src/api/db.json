@@ -3,140 +3,140 @@
     {
       "id": "user01",
       "name": "Daniel Smith",
-      "expertise": "UI/UX Designer",
+      "expertise": ["UI/UX Designer"],
       "imageUrl": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80",
       "tasksAssigned": ["task01"]
     },
     {
       "id": "user02",
       "name": "Michael Brown",
-      "expertise": "Front End Developer",
+      "expertise": ["Front End Developer"],
       "imageUrl": "https://images.unsplash.com/photo-1509967419530-da38b4704bc6",
       "tasksAssigned": ["task02"]
     },
     {
       "id": "user03",
       "name": "David Wilson",
-      "expertise": "Data Analyst",
+      "expertise": ["Data Analyst"],
       "imageUrl": "https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f",
       "tasksAssigned": ["task03"]
     },
     {
       "id": "user04",
       "name": "Olivia Taylor",
-      "expertise": "DevOps Engineer",
+      "expertise": ["DevOps Engineer"],
       "imageUrl": "https://images.unsplash.com/photo-1573140247632-f8fd74997d5c",
       "tasksAssigned": ["task04"]
     },
     {
       "id": "user05",
       "name": "Mia Harris",
-      "expertise": "Software Engineer",
+      "expertise": ["Software Engineer"],
       "imageUrl": "https://images.unsplash.com/photo-1485178575877-1a13bf489dfe",
       "tasksAssigned": ["task05"]
     },
     {
       "id": "user06",
       "name": "Charlotte Anderson",
-      "expertise": "Mobile App Developer",
+      "expertise": ["Mobile App Developer"],
       "imageUrl": "https://images.unsplash.com/photo-1474176857210-7287d38d27c6",
       "tasksAssigned": ["task06"]
     },
     {
       "id": "user07",
       "name": "Isabella Gonzalez",
-      "expertise": "QA Engineer",
+      "expertise": ["QA Engineer"],
       "imageUrl": "https://images.unsplash.com/photo-1601576084861-5de423553c0f",
       "tasksAssigned": ["task07"]
     },
     {
       "id": "user08",
       "name": "William Scott",
-      "expertise": "Project Manager",
+      "expertise": ["Project Manager"],
       "imageUrl": "https://images.unsplash.com/photo-1608232543731-44d2ebe84dd7",
       "tasksAssigned": ["task08"]
     },
     {
       "id": "user09",
       "name": "Henry Wright",
-      "expertise": "UI/UX Designer",
+      "expertise": ["UI/UX Designer"],
       "imageUrl": "https://images.unsplash.com/photo-1507101105822-7472b28e22ac",
       "tasksAssigned": ["task09"]
     },
     {
       "id": "user10",
       "name": "Ella Lopez",
-      "expertise": "Product Manager",
+      "expertise": ["Product Manager"],
       "imageUrl": "https://images.unsplash.com/photo-1615464684446-95b73066d285",
       "tasksAssigned": ["task10"]
     },
     {
       "id": "user11",
       "name": "Ethan Clarke",
-      "expertise": "Software Engineer",
+      "expertise": ["Software Engineer"],
       "imageUrl": "https://images.unsplash.com/photo-1558730234-d8b2281b0d00",
       "tasksAssigned": ["task11"]
     },
     {
       "id": "user12",
       "name": "Liam Parker",
-      "expertise": "Full Stack Developer",
+      "expertise": ["Full Stack Developer"],
       "imageUrl": "https://images.unsplash.com/photo-1531750026848-8ada78f641c2",
       "tasksAssigned": ["task12"]
     },
     {
       "id": "user13",
       "name": "Sophia Hall",
-      "expertise": "Backend Developer",
+      "expertise": ["Backend Developer"],
       "imageUrl": "",
       "tasksAssigned": ["task13"]
     },
     {
       "id": "user14",
       "name": "Noah Young",
-      "expertise": "Cybersecurity Analyst",
+      "expertise": ["Cybersecurity Analyst"],
       "imageUrl": "",
       "tasksAssigned": ["task14"]
     },
     {
       "id": "user15",
       "name": "Ava Turner",
-      "expertise": "Cloud Engineer",
+      "expertise": ["Cloud Engineer"],
       "imageUrl": "",
       "tasksAssigned": ["task15"]
     },
     {
       "id": "user16",
       "name": "James Rivera",
-      "expertise": "Embedded Systems Developer",
+      "expertise": ["Embedded Systems Developer"],
       "imageUrl": "",
       "tasksAssigned": ["task16"]
     },
     {
       "id": "user17",
       "name": "Lucas Robinson",
-      "expertise": "AI Engineer",
+      "expertise": ["AI Engineer"],
       "imageUrl": "",
       "tasksAssigned": ["task17"]
     },
     {
       "id": "user18",
       "name": "Grace Lee",
-      "expertise": "Game Developer",
+      "expertise": ["Game Developer"],
       "imageUrl": "",
       "tasksAssigned": ["task18"]
     },
     {
       "id": "user19",
       "name": "Emma Hernandez",
-      "expertise": "Blockchain Developer",
+      "expertise": ["Blockchain Developer"],
       "imageUrl": "",
       "tasksAssigned": ["task19"]
     },
     {
       "id": "user20",
       "name": "Oliver Scott",
-      "expertise": "Data Scientist",
+      "expertise": ["Data Scientist"],
       "imageUrl": "",
       "tasksAssigned": ["task20"]
     }
@@ -145,7 +145,7 @@
     {
       "id": "mentor01",
       "name": "Jessica Jane",
-      "expertise": "Web Developer",
+      "expertise": ["Web Developer"],
       "imageUrl": "",
       "reviews": [
         {
@@ -179,7 +179,7 @@
     {
       "id": "mentor02",
       "name": "Sophia Lee",
-      "expertise": "Full Stack Developer",
+      "expertise": ["Full Stack Developer"],
       "imageUrl": "",
       "reviews": [
         {
@@ -197,7 +197,7 @@
     {
       "id": "mentor03",
       "name": "Emily Davis",
-      "expertise": "Backend Developer",
+      "expertise": ["Backend Developer"],
       "imageUrl": "",
       "reviews": [
         {
@@ -231,7 +231,7 @@
     {
       "id": "mentor04",
       "name": "Ethan White",
-      "expertise": "Cybersecurity Expert",
+      "expertise": ["Cybersecurity Expert"],
       "imageUrl": "",
       "reviews": [],
       "followers": [],
@@ -249,7 +249,7 @@
     {
       "id": "mentor06",
       "name": "James Thompson",
-      "expertise": "Machine Learning Engineer",
+      "expertise": ["Machine Learning Engineer"],
       "imageUrl": "",
       "reviews": [],
       "followers": [],
@@ -258,7 +258,7 @@
     {
       "id": "mentor07",
       "name": "Ava King",
-      "expertise": "Cloud Architect",
+      "expertise": ["Cloud Architect"],
       "imageUrl": "",
       "reviews": [],
       "followers": [],
@@ -267,7 +267,7 @@
     {
       "id": "mentor08",
       "name": "Lucas Hill",
-      "expertise": "Game Developer",
+      "expertise": ["Game Developer"],
       "imageUrl": "",
       "reviews": [],
       "followers": [],
@@ -276,7 +276,7 @@
     {
       "id": "mentor09",
       "name": "Liam Adams",
-      "expertise": "Embedded Systems Engineer",
+      "expertise": ["Embedded Systems Engineer"],
       "imageUrl": "",
       "reviews": [],
       "followers": [],
@@ -285,7 +285,7 @@
     {
       "id": "mentor10",
       "name": "Olivia Bennett",
-      "expertise": "Data Scientist",
+      "expertise": ["Data Scientist"],
       "imageUrl": "",
       "reviews": [],
       "followers": [],
@@ -294,7 +294,7 @@
     {
       "id": "mentor11",
       "name": "Nathan Cooper",
-      "expertise": "DevOps Engineer",
+      "expertise": ["DevOps Engineer"],
       "imageUrl": "",
       "reviews": [],
       "followers": [],
@@ -303,7 +303,7 @@
     {
       "id": "mentor12",
       "name": "Samantha Peterson",
-      "expertise": "Product Manager",
+      "expertise": ["Product Manager"],
       "imageUrl": "",
       "reviews": [],
       "followers": [],
@@ -312,7 +312,7 @@
     {
       "id": "mentor13",
       "name": "Andrew Mitchell",
-      "expertise": "UI/UX Designer",
+      "expertise": ["UI/UX Designer"],
       "imageUrl": "",
       "reviews": [],
       "followers": [],
@@ -321,7 +321,7 @@
     {
       "id": "mentor14",
       "name": "Isabella Collins",
-      "expertise": "Blockchain Engineer",
+      "expertise": ["Blockchain Engineer"],
       "imageUrl": "",
       "reviews": [],
       "followers": [],
@@ -330,7 +330,7 @@
     {
       "id": "mentor15",
       "name": "Mason Carter",
-      "expertise": "Software Engineer",
+      "expertise": ["Software Engineer"],
       "imageUrl": "",
       "reviews": [],
       "followers": [],
@@ -339,7 +339,7 @@
     {
       "id": "mentor16",
       "name": "Emma Murphy",
-      "expertise": "QA Engineer",
+      "expertise": ["QA Engineer"],
       "imageUrl": "",
       "reviews": [],
       "followers": [],
@@ -348,7 +348,7 @@
     {
       "id": "mentor17",
       "name": "Noah Richardson",
-      "expertise": "Security Analyst",
+      "expertise": ["Security Analyst"],
       "imageUrl": "",
       "reviews": [],
       "followers": [],
@@ -357,7 +357,7 @@
     {
       "id": "mentor18",
       "name": "Sophia Watson",
-      "expertise": "Mobile App Developer",
+      "expertise": ["Mobile App Developer"],
       "imageUrl": "",
       "reviews": [],
       "followers": [],
@@ -366,7 +366,7 @@
     {
       "id": "mentor19",
       "name": "William Evans",
-      "expertise": "Data Analyst",
+      "expertise": ["Data Analyst"],
       "imageUrl": "",
       "reviews": [],
       "followers": [],
@@ -375,7 +375,7 @@
     {
       "id": "mentor20",
       "name": "Charlotte Phillips",
-      "expertise": "Project Manager",
+      "expertise": ["Project Manager"],
       "imageUrl": "",
       "reviews": [],
       "followers": [],

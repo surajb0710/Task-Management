@@ -100,7 +100,7 @@ export const getMentorByIdApi = async (id) => {
 };
 
 export const addMentor = async (mentor) => {
-  const url = '/posts';
+  const url = '/mentors';
 
   try {
     const response = await fetch(import.meta.env.VITE_BASE_URL + url, {
@@ -112,7 +112,7 @@ export const addMentor = async (mentor) => {
     });
 
     if (!response.ok) {
-      throw new Error(`Failed to create post: ${response.statusText}`);
+      throw new Error(`Failed to add mentor: ${response.statusText}`);
     }
 
     const newMentor = await response.json();
@@ -320,6 +320,31 @@ export const getUserByIdApi = async (id) => {
     return data;
   } catch (error) {
     console.error('Error fetching user:', error);
+    throw error;
+  }
+};
+
+export const addUser = async (user) => {
+  const url = '/users';
+
+  try {
+    const response = await fetch(import.meta.env.VITE_BASE_URL + url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(user),
+    });
+
+    if (!response.ok) {
+      throw new Error(`Failed to add mentor: ${response.statusText}`);
+    }
+
+    const newMentor = await response.json();
+    console.log('Mentor added successfully:', newMentor);
+    return newMentor;
+  } catch (error) {
+    console.error('Error creating post:', error);
     throw error;
   }
 };

@@ -43,7 +43,7 @@ export default function Settings() {
   console.log('lang', language);
 
   return (
-    <div className="p-8">
+    <div className="p-8 ml-[254px]">
       <Box sx={{ width: '100%', typography: 'body1' }} className="p-8 bg-white">
         <TabContext value={value}>
           <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>

@@ -12,6 +12,8 @@ import mentor_dark from './svg/mentor_dark.svg';
 import message_dark from './svg/message_dark.svg';
 import setting_dark from './svg/setting_dark.svg';
 import notification from './svg/notification.svg';
+import mentor_01 from './svg/mentor_01.svg';
+import student from './svg/student.svg';
 
 const svgs = { task, star_solid_golden };
 
@@ -62,7 +64,12 @@ const header = {
   notification,
 };
 
-export { svgs, persons, tasks, sidebar, header };
+const signup = {
+  mentor_01,
+  student,
+};
+
+export { svgs, persons, tasks, sidebar, header, signup };
 
 /* 
 

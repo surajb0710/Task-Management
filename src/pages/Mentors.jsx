@@ -24,7 +24,7 @@ const Mentors = () => {
   }, []);
 
   return (
-    <div className="w-full px-4 py-8 flex flex-col gap-8">
+    <div className="w-full px-4 py-8 flex flex-col gap-8 ml-[254px]">
       {recentMentors.length > 0 && (
         <RecentMentors recentMentors={recentMentors} />
       )}

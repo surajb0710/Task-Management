@@ -21,7 +21,7 @@ const Dashboard = () => {
   }, []);
 
   return (
-    <div className="flex">
+    <div className="flex ml-[254px]">
       <div className="grow bg-[#FAFAFA]">
         <Header />
         <div className="flex mb-8 gap-8 px-8 max-h-[214px]">
