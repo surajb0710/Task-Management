@@ -17,7 +17,7 @@ const VisuallyHiddenInput = styled('input')({
   width: 1,
 });
 
-export default function InputFileUpload({ setSelectedImages }) {
+export function MultiImageUploader({ setSelectedImages }) {
   const [uploading, setUploading] = useState(false);
   const [images, setImages] = useState([]);
 
@@ -110,6 +110,89 @@ export default function InputFileUpload({ setSelectedImages }) {
   );
 }
 
-InputFileUpload.propTypes = {
+MultiImageUploader.propTypes = {
   setSelectedImages: PropTypes.func.isRequired,
+};
+
+export function SingleImageUploader({ setSelectedImage }) {
+  const [uploading, setUploading] = useState(false);
+  const [image, setImage] = useState(null);
+
+  const uploadImage = async (event) => {
+    const file = event.target.files[0]; // Only take the first file
+    const maxFileSize = 5 * 1024 * 1024; // 5MB
+
+    if (!file) return;
+    if (file.size > maxFileSize) {
+      alert(`File ${file.name} exceeds 5MB limit.`);
+      return;
+    }
+    if (!file.type.startsWith('image/')) {
+      alert(`File ${file.name} is not an image.`);
+      return;
+    }
+
+    setUploading(true);
+
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('upload_preset', 'task_manager');
+
+    try {
+      const response = await fetch(
+        `https://api.cloudinary.com/v1_1/${
+          import.meta.env.VITE_CLOUDINARY_CLOUD_NAME
+        }/image/upload`,
+        {
+          method: 'POST',
+          body: formData,
+        }
+      );
+
+      const data = await response.json();
+      setImage(data.secure_url);
+    } catch (error) {
+      console.error('Upload failed:', error);
+    } finally {
+      setUploading(false);
+    }
+  };
+
+  useEffect(() => {
+    setSelectedImage(image);
+  }, [image, setSelectedImage]);
+
+  return (
+    <div>
+      <Button
+        component="label"
+        variant="contained"
+        startIcon={
+          uploading ? <CircularProgress size={20} /> : <CloudUploadIcon />
+        }
+        disabled={uploading}
+      >
+        {uploading ? 'Uploading...' : 'Upload files'}
+        <VisuallyHiddenInput
+          type="file"
+          accept="image/*"
+          multiple
+          onChange={uploadImage}
+        />
+      </Button>
+
+      <div style={{ marginTop: 20, display: 'flex', gap: 10 }}>
+        <img
+          src={image}
+          alt="Uploaded"
+          width={100}
+          style={{ borderRadius: 8 }}
+        />
+      </div>
+    </div>
+  );
+}
+
+SingleImageUploader.propTypes = {
+  setSelectedImage: PropTypes.func.isRequired,
 };

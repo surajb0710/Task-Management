@@ -3,231 +3,149 @@
     {
       "id": "user01",
       "name": "Daniel Smith",
-      "expertise": [
-        "UI/UX Designer"
-      ],
+      "expertise": ["UI/UX Designer"],
       "imageUrl": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80",
-      "tasksAssigned": [
-        "task01"
-      ]
+      "tasksAssigned": ["task01"]
     },
     {
       "id": "user02",
       "name": "Michael Brown",
-      "expertise": [
-        "Front End Developer"
-      ],
+      "expertise": ["Front End Developer"],
       "imageUrl": "https://images.unsplash.com/photo-1509967419530-da38b4704bc6",
-      "tasksAssigned": [
-        "task02"
-      ]
+      "tasksAssigned": ["task02"]
     },
     {
       "id": "user03",
       "name": "David Wilson",
-      "expertise": [
-        "Data Analyst"
-      ],
+      "expertise": ["Data Analyst"],
       "imageUrl": "https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f",
-      "tasksAssigned": [
-        "task03"
-      ]
+      "tasksAssigned": ["task03"]
     },
     {
       "id": "user04",
       "name": "Olivia Taylor",
-      "expertise": [
-        "DevOps Engineer"
-      ],
+      "expertise": ["DevOps Engineer"],
       "imageUrl": "https://images.unsplash.com/photo-1573140247632-f8fd74997d5c",
-      "tasksAssigned": [
-        "task04"
-      ]
+      "tasksAssigned": ["task04"]
     },
     {
       "id": "user05",
       "name": "Mia Harris",
-      "expertise": [
-        "Software Engineer"
-      ],
+      "expertise": ["Software Engineer"],
       "imageUrl": "https://images.unsplash.com/photo-1485178575877-1a13bf489dfe",
-      "tasksAssigned": [
-        "task05"
-      ]
+      "tasksAssigned": ["task05"]
     },
     {
       "id": "user06",
       "name": "Charlotte Anderson",
-      "expertise": [
-        "Mobile App Developer"
-      ],
+      "expertise": ["Mobile App Developer"],
       "imageUrl": "https://images.unsplash.com/photo-1474176857210-7287d38d27c6",
-      "tasksAssigned": [
-        "task06"
-      ]
+      "tasksAssigned": ["task06"]
     },
     {
       "id": "user07",
       "name": "Isabella Gonzalez",
-      "expertise": [
-        "QA Engineer"
-      ],
+      "expertise": ["QA Engineer"],
       "imageUrl": "https://images.unsplash.com/photo-1601576084861-5de423553c0f",
-      "tasksAssigned": [
-        "task07"
-      ]
+      "tasksAssigned": ["task07"]
     },
     {
       "id": "user08",
       "name": "William Scott",
-      "expertise": [
-        "Project Manager"
-      ],
+      "expertise": ["Project Manager"],
       "imageUrl": "https://images.unsplash.com/photo-1608232543731-44d2ebe84dd7",
-      "tasksAssigned": [
-        "task08"
-      ]
+      "tasksAssigned": ["task08"]
     },
     {
       "id": "user09",
       "name": "Henry Wright",
-      "expertise": [
-        "UI/UX Designer"
-      ],
+      "expertise": ["UI/UX Designer"],
       "imageUrl": "https://images.unsplash.com/photo-1507101105822-7472b28e22ac",
-      "tasksAssigned": [
-        "task09"
-      ]
+      "tasksAssigned": ["task09"]
     },
     {
       "id": "user10",
       "name": "Ella Lopez",
-      "expertise": [
-        "Product Manager"
-      ],
+      "expertise": ["Product Manager"],
       "imageUrl": "https://images.unsplash.com/photo-1615464684446-95b73066d285",
-      "tasksAssigned": [
-        "task10"
-      ]
+      "tasksAssigned": ["task10"]
     },
     {
       "id": "user11",
       "name": "Ethan Clarke",
-      "expertise": [
-        "Software Engineer"
-      ],
+      "expertise": ["Software Engineer"],
       "imageUrl": "https://images.unsplash.com/photo-1558730234-d8b2281b0d00",
-      "tasksAssigned": [
-        "task11"
-      ]
+      "tasksAssigned": ["task11"]
     },
     {
       "id": "user12",
       "name": "Liam Parker",
-      "expertise": [
-        "Full Stack Developer"
-      ],
+      "expertise": ["Full Stack Developer"],
       "imageUrl": "https://images.unsplash.com/photo-1531750026848-8ada78f641c2",
-      "tasksAssigned": [
-        "task12"
-      ]
+      "tasksAssigned": ["task12"]
     },
     {
       "id": "user13",
       "name": "Sophia Hall",
-      "expertise": [
-        "Backend Developer"
-      ],
+      "expertise": ["Backend Developer"],
       "imageUrl": "",
-      "tasksAssigned": [
-        "task13"
-      ]
+      "tasksAssigned": ["task13"]
     },
     {
       "id": "user14",
       "name": "Noah Young",
-      "expertise": [
-        "Cybersecurity Analyst"
-      ],
+      "expertise": ["Cybersecurity Analyst"],
       "imageUrl": "",
-      "tasksAssigned": [
-        "task14"
-      ]
+      "tasksAssigned": ["task14"]
     },
     {
       "id": "user15",
       "name": "Ava Turner",
-      "expertise": [
-        "Cloud Engineer"
-      ],
+      "expertise": ["Cloud Engineer"],
       "imageUrl": "",
-      "tasksAssigned": [
-        "task15"
-      ]
+      "tasksAssigned": ["task15"]
     },
     {
       "id": "user16",
       "name": "James Rivera",
-      "expertise": [
-        "Embedded Systems Developer"
-      ],
+      "expertise": ["Embedded Systems Developer"],
       "imageUrl": "",
-      "tasksAssigned": [
-        "task16"
-      ]
+      "tasksAssigned": ["task16"]
     },
     {
       "id": "user17",
       "name": "Lucas Robinson",
-      "expertise": [
-        "AI Engineer"
-      ],
+      "expertise": ["AI Engineer"],
       "imageUrl": "",
-      "tasksAssigned": [
-        "task17"
-      ]
+      "tasksAssigned": ["task17"]
     },
     {
       "id": "user18",
       "name": "Grace Lee",
-      "expertise": [
-        "Game Developer"
-      ],
+      "expertise": ["Game Developer"],
       "imageUrl": "",
-      "tasksAssigned": [
-        "task18"
-      ]
+      "tasksAssigned": ["task18"]
     },
     {
       "id": "user19",
       "name": "Emma Hernandez",
-      "expertise": [
-        "Blockchain Developer"
-      ],
+      "expertise": ["Blockchain Developer"],
       "imageUrl": "",
-      "tasksAssigned": [
-        "task19"
-      ]
+      "tasksAssigned": ["task19"]
     },
     {
       "id": "user20",
       "name": "Oliver Scott",
-      "expertise": [
-        "Data Scientist"
-      ],
+      "expertise": ["Data Scientist"],
       "imageUrl": "",
-      "tasksAssigned": [
-        "task20"
-      ]
+      "tasksAssigned": ["task20"]
     }
   ],
   "mentors": [
     {
       "id": "mentor01",
       "name": "Jessica Jane",
-      "expertise": [
-        "Web Developer"
-      ],
+      "expertise": ["Web Developer"],
       "imageUrl": "",
       "reviews": [
         {
@@ -255,21 +173,13 @@
           "createdAt": "2025-02-15T16:01:00Z"
         }
       ],
-      "followers": [
-        "user01",
-        "user02",
-        "user03"
-      ],
-      "tasksMentored": [
-        "task01"
-      ]
+      "followers": ["user01", "user02", "user03"],
+      "tasksMentored": ["task01"]
     },
     {
       "id": "mentor02",
       "name": "Sophia Lee",
-      "expertise": [
-        "Full Stack Developer"
-      ],
+      "expertise": ["Full Stack Developer"],
       "imageUrl": "",
       "reviews": [
         {
@@ -282,16 +192,12 @@
         }
       ],
       "followers": [],
-      "tasksMentored": [
-        "task02"
-      ]
+      "tasksMentored": ["task02"]
     },
     {
       "id": "mentor03",
       "name": "Emily Davis",
-      "expertise": [
-        "Backend Developer"
-      ],
+      "expertise": ["Backend Developer"],
       "imageUrl": "",
       "reviews": [
         {
@@ -320,22 +226,16 @@
         }
       ],
       "followers": [],
-      "tasksMentored": [
-        "task03"
-      ]
+      "tasksMentored": ["task03"]
     },
     {
       "id": "mentor04",
       "name": "Ethan White",
-      "expertise": [
-        "Cybersecurity Expert"
-      ],
+      "expertise": ["Cybersecurity Expert"],
       "imageUrl": "",
       "reviews": [],
       "followers": [],
-      "tasksMentored": [
-        "task04"
-      ]
+      "tasksMentored": ["task04"]
     },
     {
       "id": "mentor05",
@@ -344,204 +244,142 @@
       "imageUrl": "",
       "reviews": [],
       "followers": [],
-      "tasksMentored": [
-        "task05"
-      ]
+      "tasksMentored": ["task05"]
     },
     {
       "id": "mentor06",
       "name": "James Thompson",
-      "expertise": [
-        "Machine Learning Engineer"
-      ],
+      "expertise": ["Machine Learning Engineer"],
       "imageUrl": "",
       "reviews": [],
       "followers": [],
-      "tasksMentored": [
-        "task06"
-      ]
+      "tasksMentored": ["task06"]
     },
     {
       "id": "mentor07",
       "name": "Ava King",
-      "expertise": [
-        "Cloud Architect"
-      ],
+      "expertise": ["Cloud Architect"],
       "imageUrl": "",
       "reviews": [],
       "followers": [],
-      "tasksMentored": [
-        "task07"
-      ]
+      "tasksMentored": ["task07"]
     },
     {
       "id": "mentor08",
       "name": "Lucas Hill",
-      "expertise": [
-        "Game Developer"
-      ],
+      "expertise": ["Game Developer"],
       "imageUrl": "",
       "reviews": [],
       "followers": [],
-      "tasksMentored": [
-        "task08"
-      ]
+      "tasksMentored": ["task08"]
     },
     {
       "id": "mentor09",
       "name": "Liam Adams",
-      "expertise": [
-        "Embedded Systems Engineer"
-      ],
+      "expertise": ["Embedded Systems Engineer"],
       "imageUrl": "",
       "reviews": [],
       "followers": [],
-      "tasksMentored": [
-        "task09"
-      ]
+      "tasksMentored": ["task09"]
     },
     {
       "id": "mentor10",
       "name": "Olivia Bennett",
-      "expertise": [
-        "Data Scientist"
-      ],
+      "expertise": ["Data Scientist"],
       "imageUrl": "",
       "reviews": [],
       "followers": [],
-      "tasksMentored": [
-        "task10"
-      ]
+      "tasksMentored": ["task10"]
     },
     {
       "id": "mentor11",
       "name": "Nathan Cooper",
-      "expertise": [
-        "DevOps Engineer"
-      ],
+      "expertise": ["DevOps Engineer"],
       "imageUrl": "",
       "reviews": [],
       "followers": [],
-      "tasksMentored": [
-        "task11"
-      ]
+      "tasksMentored": ["task11"]
     },
     {
       "id": "mentor12",
       "name": "Samantha Peterson",
-      "expertise": [
-        "Product Manager"
-      ],
+      "expertise": ["Product Manager"],
       "imageUrl": "",
       "reviews": [],
       "followers": [],
-      "tasksMentored": [
-        "task12"
-      ]
+      "tasksMentored": ["task12"]
     },
     {
       "id": "mentor13",
       "name": "Andrew Mitchell",
-      "expertise": [
-        "UI/UX Designer"
-      ],
+      "expertise": ["UI/UX Designer"],
       "imageUrl": "",
       "reviews": [],
       "followers": [],
-      "tasksMentored": [
-        "task13"
-      ]
+      "tasksMentored": ["task13"]
     },
     {
       "id": "mentor14",
       "name": "Isabella Collins",
-      "expertise": [
-        "Blockchain Engineer"
-      ],
+      "expertise": ["Blockchain Engineer"],
       "imageUrl": "",
       "reviews": [],
       "followers": [],
-      "tasksMentored": [
-        "task14"
-      ]
+      "tasksMentored": ["task14"]
     },
     {
       "id": "mentor15",
       "name": "Mason Carter",
-      "expertise": [
-        "Software Engineer"
-      ],
+      "expertise": ["Software Engineer"],
       "imageUrl": "",
       "reviews": [],
       "followers": [],
-      "tasksMentored": [
-        "task15"
-      ]
+      "tasksMentored": ["task15"]
     },
     {
       "id": "mentor16",
       "name": "Emma Murphy",
-      "expertise": [
-        "QA Engineer"
-      ],
+      "expertise": ["QA Engineer"],
       "imageUrl": "",
       "reviews": [],
       "followers": [],
-      "tasksMentored": [
-        "task16"
-      ]
+      "tasksMentored": ["task16"]
     },
     {
       "id": "mentor17",
       "name": "Noah Richardson",
-      "expertise": [
-        "Security Analyst"
-      ],
+      "expertise": ["Security Analyst"],
       "imageUrl": "",
       "reviews": [],
       "followers": [],
-      "tasksMentored": [
-        "task17"
-      ]
+      "tasksMentored": ["task17"]
     },
     {
       "id": "mentor18",
       "name": "Sophia Watson",
-      "expertise": [
-        "Mobile App Developer"
-      ],
+      "expertise": ["Mobile App Developer"],
       "imageUrl": "",
       "reviews": [],
       "followers": [],
-      "tasksMentored": [
-        "task18"
-      ]
+      "tasksMentored": ["task18"]
     },
     {
       "id": "mentor19",
       "name": "William Evans",
-      "expertise": [
-        "Data Analyst"
-      ],
+      "expertise": ["Data Analyst"],
       "imageUrl": "",
       "reviews": [],
       "followers": [],
-      "tasksMentored": [
-        "task19"
-      ]
+      "tasksMentored": ["task19"]
     },
     {
       "id": "mentor20",
       "name": "Charlotte Phillips",
-      "expertise": [
-        "Project Manager"
-      ],
+      "expertise": ["Project Manager"],
       "imageUrl": "",
       "reviews": [],
       "followers": [],
-      "tasksMentored": [
-        "task20"
-      ]
+      "tasksMentored": ["task20"]
     }
   ],
   "tasksa": [
@@ -553,11 +391,7 @@
       "dueDate": "2025-02-19T16:00:00Z",
       "createdAt": "2025-02-15T16:01:00Z",
       "assignee": "user01",
-      "mentors": [
-        "mentor01",
-        "mentor02",
-        "mentor03"
-      ],
+      "mentors": ["mentor01", "mentor02", "mentor03"],
       "media": [
         {
           "mediaType": "image",
@@ -573,9 +407,7 @@
       "dueDate": "2025-02-19T17:00:00Z",
       "createdAt": "2025-02-15T16:02:00Z",
       "assignee": "user02",
-      "mentors": [
-        "mentor02"
-      ],
+      "mentors": ["mentor02"],
       "media": [
         {
           "mediaType": "image",
@@ -591,9 +423,7 @@
       "dueDate": "2025-02-19T18:00:00Z",
       "createdAt": "2025-02-15T16:03:00Z",
       "assignee": "user03",
-      "mentors": [
-        "mentor03"
-      ],
+      "mentors": ["mentor03"],
       "media": []
     },
     {
@@ -604,9 +434,7 @@
       "dueDate": "2025-02-20T16:00:00Z",
       "createdAt": "2025-02-15T16:04:00Z",
       "assignee": "user04",
-      "mentors": [
-        "mentor04"
-      ],
+      "mentors": ["mentor04"],
       "media": []
     },
     {
@@ -617,9 +445,7 @@
       "dueDate": "2025-02-22T16:00:00Z",
       "createdAt": "2025-02-15T16:05:00Z",
       "assignee": "user05",
-      "mentors": [
-        "mentor05"
-      ],
+      "mentors": ["mentor05"],
       "media": [
         {
           "mediaType": "image",
@@ -635,9 +461,7 @@
       "dueDate": "2025-02-23T16:00:00Z",
       "createdAt": "2025-02-15T16:06:00Z",
       "assignee": "user06",
-      "mentors": [
-        "mentor06"
-      ],
+      "mentors": ["mentor06"],
       "media": []
     },
     {
@@ -648,9 +472,7 @@
       "dueDate": "2025-02-22T16:00:00Z",
       "createdAt": "2025-02-15T16:07:00Z",
       "assignee": "user07",
-      "mentors": [
-        "mentor07"
-      ],
+      "mentors": ["mentor07"],
       "media": []
     },
     {
@@ -661,9 +483,7 @@
       "dueDate": "2025-02-23T16:00:00Z",
       "createdAt": "2025-02-15T16:08:00Z",
       "assignee": "user08",
-      "mentors": [
-        "mentor08"
-      ],
+      "mentors": ["mentor08"],
       "media": [
         {
           "mediaType": "image",
@@ -679,9 +499,7 @@
       "dueDate": "2025-02-23T16:00:00Z",
       "createdAt": "2025-02-15T16:09:00Z",
       "assignee": "user09",
-      "mentors": [
-        "mentor09"
-      ],
+      "mentors": ["mentor09"],
       "media": []
     },
     {
@@ -692,9 +510,7 @@
       "dueDate": "2025-02-23T16:00:00Z",
       "createdAt": "2025-02-15T16:10:00Z",
       "assignee": "user10",
-      "mentors": [
-        "mentor10"
-      ],
+      "mentors": ["mentor10"],
       "media": []
     },
     {
@@ -705,9 +521,7 @@
       "dueDate": "2025-02-23T16:00:00Z",
       "createdAt": "2025-02-15T16:11:00Z",
       "assignee": "user11",
-      "mentors": [
-        "mentor11"
-      ],
+      "mentors": ["mentor11"],
       "media": []
     },
     {
@@ -718,9 +532,7 @@
       "dueDate": "2025-02-23T16:00:00Z",
       "createdAt": "2025-02-15T16:12:00Z",
       "assignee": "user12",
-      "mentors": [
-        "mentor12"
-      ],
+      "mentors": ["mentor12"],
       "media": []
     },
     {
@@ -731,9 +543,7 @@
       "dueDate": "2025-02-23T16:00:00Z",
       "createdAt": "2025-02-15T16:13:00Z",
       "assignee": "user13",
-      "mentors": [
-        "mentor13"
-      ],
+      "mentors": ["mentor13"],
       "media": []
     },
     {
@@ -744,9 +554,7 @@
       "dueDate": "2025-02-23T16:00:00Z",
       "createdAt": "2025-02-15T16:14:00Z",
       "assignee": "user14",
-      "mentors": [
-        "mentor14"
-      ],
+      "mentors": ["mentor14"],
       "media": []
     },
     {
@@ -757,9 +565,7 @@
       "dueDate": "2025-02-23T16:00:00Z",
       "createdAt": "2025-02-15T16:15:00Z",
       "assignee": "user15",
-      "mentors": [
-        "mentor15"
-      ],
+      "mentors": ["mentor15"],
       "media": []
     },
     {
@@ -770,9 +576,7 @@
       "dueDate": "2025-02-23T16:00:00Z",
       "createdAt": "2025-02-15T16:16:00Z",
       "assignee": "user16",
-      "mentors": [
-        "mentor16"
-      ],
+      "mentors": ["mentor16"],
       "media": []
     },
     {
@@ -783,9 +587,7 @@
       "dueDate": "2025-02-23T16:00:00Z",
       "createdAt": "2025-02-15T16:17:00Z",
       "assignee": "user17",
-      "mentors": [
-        "mentor17"
-      ],
+      "mentors": ["mentor17"],
       "media": []
     },
     {
@@ -796,9 +598,7 @@
       "dueDate": "2025-02-23T16:00:00Z",
       "createdAt": "2025-02-20T16:18:00Z",
       "assignee": "user18",
-      "mentors": [
-        "mentor18"
-      ],
+      "mentors": ["mentor18"],
       "media": []
     },
     {
@@ -809,9 +609,7 @@
       "dueDate": "2025-02-23T17:00:00Z",
       "createdAt": "2025-02-20T16:19:00Z",
       "assignee": "user19",
-      "mentors": [
-        "mentor19"
-      ],
+      "mentors": ["mentor19"],
       "media": []
     },
     {
@@ -822,9 +620,7 @@
       "dueDate": "2025-02-23T14:00:00Z",
       "createdAt": "2025-02-20T16:20:00Z",
       "assignee": "user20",
-      "mentors": [
-        "mentor20"
-      ],
+      "mentors": ["mentor20"],
       "media": []
     }
   ],
@@ -837,10 +633,7 @@
       "dueDate": "2025-02-15T00:00:00Z",
       "createdAt": "2025-02-01T00:00:00Z",
       "assignee": "user01",
-      "mentors": [
-        "mentor01",
-        "mentor02"
-      ],
+      "mentors": ["mentor01", "mentor02"],
       "media": [
         {
           "mediaType": "image",
@@ -856,10 +649,7 @@
       "dueDate": "2025-02-15T01:00:00Z",
       "createdAt": "2025-02-01T01:00:00Z",
       "assignee": "user02",
-      "mentors": [
-        "mentor01",
-        "mentor02"
-      ],
+      "mentors": ["mentor01", "mentor02"],
       "media": [
         {
           "mediaType": "image",
@@ -875,10 +665,7 @@
       "dueDate": "2025-02-15T02:00:00Z",
       "createdAt": "2025-02-01T02:00:00Z",
       "assignee": "user03",
-      "mentors": [
-        "mentor01",
-        "mentor02"
-      ],
+      "mentors": ["mentor01", "mentor02"],
       "media": [
         {
           "mediaType": "image",
@@ -894,10 +681,7 @@
       "dueDate": "2025-02-15T03:00:00Z",
       "createdAt": "2025-02-01T03:00:00Z",
       "assignee": "user04",
-      "mentors": [
-        "mentor01",
-        "mentor02"
-      ],
+      "mentors": ["mentor01", "mentor02"],
       "media": [
         {
           "mediaType": "image",
@@ -913,11 +697,7 @@
       "dueDate": "2025-02-16T00:00:00Z",
       "createdAt": "2025-02-02T00:00:00Z",
       "assignee": "user05",
-      "mentors": [
-        "mentor01",
-        "mentor02",
-        "mentor18"
-      ],
+      "mentors": ["mentor01", "mentor02", "mentor18"],
       "media": [
         {
           "mediaType": "image",
@@ -933,11 +713,7 @@
       "dueDate": "2025-02-16T01:00:00Z",
       "createdAt": "2025-02-02T01:00:00Z",
       "assignee": "user06",
-      "mentors": [
-        "mentor01",
-        "mentor02",
-        "mentor18"
-      ],
+      "mentors": ["mentor01", "mentor02", "mentor18"],
       "media": [
         {
           "mediaType": "image",
@@ -953,11 +729,7 @@
       "dueDate": "2025-02-16T02:00:00Z",
       "createdAt": "2025-02-02T02:00:00Z",
       "assignee": "user07",
-      "mentors": [
-        "mentor01",
-        "mentor02",
-        "mentor18"
-      ],
+      "mentors": ["mentor01", "mentor02", "mentor18"],
       "media": [
         {
           "mediaType": "image",
@@ -973,11 +745,7 @@
       "dueDate": "2025-02-17T00:00:00Z",
       "createdAt": "2025-02-03T00:00:00Z",
       "assignee": "user08",
-      "mentors": [
-        "mentor01",
-        "mentor02",
-        "mentor18"
-      ],
+      "mentors": ["mentor01", "mentor02", "mentor18"],
       "media": [
         {
           "mediaType": "image",
@@ -993,11 +761,7 @@
       "dueDate": "2025-02-17T01:00:00Z",
       "createdAt": "2025-02-04T00:00:00Z",
       "assignee": "user09",
-      "mentors": [
-        "mentor01",
-        "mentor02",
-        "mentor18"
-      ],
+      "mentors": ["mentor01", "mentor02", "mentor18"],
       "media": [
         {
           "mediaType": "image",
@@ -1013,11 +777,7 @@
       "dueDate": "2025-02-17T02:00:00Z",
       "createdAt": "2025-02-05T00:00:00Z",
       "assignee": "user10",
-      "mentors": [
-        "mentor02",
-        "mentor05",
-        "mentor18"
-      ],
+      "mentors": ["mentor02", "mentor05", "mentor18"],
       "media": [
         {
           "mediaType": "image",
@@ -1033,11 +793,7 @@
       "dueDate": "2025-02-18T00:00:00Z",
       "createdAt": "2025-02-05T01:00:00Z",
       "assignee": "user11",
-      "mentors": [
-        "mentor02",
-        "mentor05",
-        "mentor18"
-      ],
+      "mentors": ["mentor02", "mentor05", "mentor18"],
       "media": [
         {
           "mediaType": "image",
@@ -1053,11 +809,7 @@
       "dueDate": "2025-02-18T01:00:00Z",
       "createdAt": "2025-02-05T02:00:00Z",
       "assignee": "user12",
-      "mentors": [
-        "mentor02",
-        "mentor05",
-        "mentor18"
-      ],
+      "mentors": ["mentor02", "mentor05", "mentor18"],
       "media": [
         {
           "mediaType": "image",
@@ -1073,11 +825,7 @@
       "dueDate": "2025-02-18T02:00:00Z",
       "createdAt": "2025-02-06T00:00:00Z",
       "assignee": "user13",
-      "mentors": [
-        "mentor01",
-        "mentor05",
-        "mentor18"
-      ],
+      "mentors": ["mentor01", "mentor05", "mentor18"],
       "media": [
         {
           "mediaType": "image",
@@ -1093,10 +841,7 @@
       "dueDate": "2025-02-18T03:00:00Z",
       "createdAt": "2025-02-06T01:00:00Z",
       "assignee": "user14",
-      "mentors": [
-        "mentor05",
-        "mentor18"
-      ],
+      "mentors": ["mentor05", "mentor18"],
       "media": [
         {
           "mediaType": "image",
@@ -1112,11 +857,7 @@
       "dueDate": "2025-02-19T00:00:00Z",
       "createdAt": "2025-02-07T00:00:00Z",
       "assignee": "user15",
-      "mentors": [
-        "mentor03",
-        "mentor05",
-        "mentor12"
-      ],
+      "mentors": ["mentor03", "mentor05", "mentor12"],
       "media": [
         {
           "mediaType": "image",
@@ -1132,11 +873,7 @@
       "dueDate": "2025-02-19T01:00:00Z",
       "createdAt": "2025-02-07T01:00:00Z",
       "assignee": "user01",
-      "mentors": [
-        "mentor05",
-        "mentor06",
-        "mentor16"
-      ],
+      "mentors": ["mentor05", "mentor06", "mentor16"],
       "media": [
         {
           "mediaType": "image",
@@ -1152,10 +889,7 @@
       "dueDate": "2025-02-19T02:00:00Z",
       "createdAt": "2025-02-07T02:00:00Z",
       "assignee": "user01",
-      "mentors": [
-        "mentor05",
-        "mentor09"
-      ],
+      "mentors": ["mentor05", "mentor09"],
       "media": [
         {
           "mediaType": "image",
@@ -1171,9 +905,7 @@
       "dueDate": "2025-02-19T03:00:00Z",
       "createdAt": "2025-02-07T03:00:00Z",
       "assignee": "user01",
-      "mentors": [
-        "mentor05"
-      ],
+      "mentors": ["mentor05"],
       "media": [
         {
           "mediaType": "image",
@@ -1189,10 +921,7 @@
       "dueDate": "2025-02-20T00:00:00Z",
       "createdAt": "2025-02-08T00:00:00Z",
       "assignee": "user01",
-      "mentors": [
-        "mentor05",
-        "mentor08"
-      ],
+      "mentors": ["mentor05", "mentor08"],
       "media": [
         {
           "mediaType": "image",
@@ -1208,9 +937,7 @@
       "dueDate": "2025-02-20T01:00:00Z",
       "createdAt": "2025-02-08T01:00:00Z",
       "assignee": "user01",
-      "mentors": [
-        "mentor08"
-      ],
+      "mentors": ["mentor08"],
       "media": [
         {
           "mediaType": "image",
@@ -1226,9 +953,7 @@
       "dueDate": "2025-02-20T02:00:00Z",
       "createdAt": "2025-02-08T02:00:00Z",
       "assignee": "user01",
-      "mentors": [
-        "mentor08"
-      ],
+      "mentors": ["mentor08"],
       "media": [
         {
           "mediaType": "image",
@@ -1244,9 +969,7 @@
       "dueDate": "2025-02-21T00:00:00Z",
       "createdAt": "2025-02-08T03:00:00Z",
       "assignee": "user01",
-      "mentors": [
-        "mentor08"
-      ],
+      "mentors": ["mentor08"],
       "media": [
         {
           "mediaType": "image",
@@ -1262,10 +985,7 @@
       "dueDate": "2025-02-21T01:00:00Z",
       "createdAt": "2025-02-08T04:00:00Z",
       "assignee": "user01",
-      "mentors": [
-        "mentor08",
-        "mentor10"
-      ],
+      "mentors": ["mentor08", "mentor10"],
       "media": [
         {
           "mediaType": "image",
@@ -1281,9 +1001,7 @@
       "dueDate": "2025-02-21T02:00:00Z",
       "createdAt": "2025-02-08T05:00:00Z",
       "assignee": "user01",
-      "mentors": [
-        "mentor10"
-      ],
+      "mentors": ["mentor10"],
       "media": [
         {
           "mediaType": "image",
@@ -1299,9 +1017,7 @@
       "dueDate": "2025-02-22T00:00:00Z",
       "createdAt": "2025-02-15T00:00:00Z",
       "assignee": "user01",
-      "mentors": [
-        "mentor10"
-      ],
+      "mentors": ["mentor10"],
       "media": [
         {
           "mediaType": "image",
@@ -1317,9 +1033,7 @@
       "dueDate": "2025-02-22T01:00:00Z",
       "createdAt": "2025-02-16T00:00:00Z",
       "assignee": "user01",
-      "mentors": [
-        "mentor10"
-      ],
+      "mentors": ["mentor10"],
       "media": [
         {
           "mediaType": "image",
@@ -1335,9 +1049,7 @@
       "dueDate": "2025-02-22T02:00:00Z",
       "createdAt": "2025-02-17T00:00:00Z",
       "assignee": "user01",
-      "mentors": [
-        "mentor10"
-      ],
+      "mentors": ["mentor10"],
       "media": [
         {
           "mediaType": "image",
@@ -1353,10 +1065,7 @@
       "dueDate": "2025-02-23T00:00:00Z",
       "createdAt": "2025-02-17T01:00:00Z",
       "assignee": "user01",
-      "mentors": [
-        "mentor10",
-        "mentor15"
-      ],
+      "mentors": ["mentor10", "mentor15"],
       "media": [
         {
           "mediaType": "image",
@@ -1372,9 +1081,7 @@
       "dueDate": "2025-02-23T01:00:00Z",
       "createdAt": "2025-02-17T02:00:00Z",
       "assignee": "user01",
-      "mentors": [
-        "mentor15"
-      ],
+      "mentors": ["mentor15"],
       "media": [
         {
           "mediaType": "image",
@@ -1390,69 +1097,13 @@
       "dueDate": "2025-02-23T02:00:00Z",
       "createdAt": "2025-02-18T00:00:00Z",
       "assignee": "user01",
-      "mentors": [
-        "mentor15"
-      ],
+      "mentors": ["mentor15"],
       "media": [
         {
           "mediaType": "image",
           "mediaUrl": "https://cdn.dribbble.com/userupload/10200859/file/original-68d924d7391a23f550caa12053fe4b80.png"
         }
       ]
-    },
-    {
-      "title": "Sample Task",
-      "category": "category1",
-      "progress": 0,
-      "dueDate": "2025-02-27T18:30:00.000Z",
-      "createdAt": "2025-02-22T08:11:35.292Z",
-      "assignee": "assignee1",
-      "mentors": [
-        "Option 2",
-        "Option 1"
-      ],
-      "media": [
-        "https://res.cloudinary.com/da1gsgbdd/image/upload/v1740211918/i8s3anckvzpkaifevaji.png"
-      ],
-      "id": "lJ2m55j"
-    },
-    {
-      "title": "sample Task",
-      "category": "category1",
-      "progress": 0,
-      "dueDate": "2025-02-26T18:30:00.000Z",
-      "createdAt": "2025-02-22T08:14:49.566Z",
-      "assignee": "assignee2",
-      "mentors": [
-        "Option 2"
-      ],
-      "media": [
-        "https://res.cloudinary.com/da1gsgbdd/image/upload/v1740212105/ijree5vaxleapqtfhx4y.png"
-      ],
-      "id": "7yJV6AH"
-    },
-    {
-      "title": "Sample Task a",
-      "category": "category1",
-      "progress": 0,
-      "dueDate": "2025-02-25T18:30:00.000Z",
-      "createdAt": "2025-02-22T08:18:16.956Z",
-      "assignee": "assignee1",
-      "mentors": [
-        "Option 1",
-        "Option 3"
-      ],
-      "media": [
-        {
-          "mediaType": "image",
-          "mediaUrl": "https://res.cloudinary.com/da1gsgbdd/image/upload/v1740212322/lt1oquwnh64pd6aonzwz.png"
-        },
-        {
-          "mediaType": "image",
-          "mediaUrl": "https://res.cloudinary.com/da1gsgbdd/image/upload/v1740212323/ykkckanbmgcpyrczgp1m.png"
-        }
-      ],
-      "id": "_QXpx1M"
     }
   ]
 }

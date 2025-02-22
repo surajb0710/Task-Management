@@ -2,7 +2,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import MultiSelectDropdown from './components/MultiSelectDropdown';
 import DatePicker from './components/DatePicker';
-import FileUploader from './components/FileUploader';
+import { MultiImageUploader } from './components/ImageUploader';
 import CloseIcon from '@mui/icons-material/Close';
 import PropTypes from 'prop-types';
 import { convertISTtoUTC } from '../../utils/dateFormat';
@@ -198,7 +198,7 @@ const AddTask = ({ setShowAddTaskModel }) => {
           )}
         </div>
         <DatePicker setSelectedDate={setSelectedDate} />
-        <FileUploader setSelectedImages={setSelectedImages} />
+        <MultiImageUploader setSelectedImages={setSelectedImages} />
         <button
           type="submit"
           className="w-full p-2.5 bg-black text-white rounded-lg"

@@ -8,11 +8,12 @@ import Dashboard from './pages/Dashboard';
 import Mentors from './pages/Mentors';
 import Messages from './pages/Messages';
 import Tasks from './pages/Tasks';
-import SignUp from './pages/SignUp';
 import { useLocation } from 'react-router-dom';
 import AddTask from './components/forms/AddTask';
 import { useState } from 'react';
 import Login from './components/forms/Login';
+import Register from './components/forms/Register';
+
 import ProtectedRoute from './components/ProtectedRoute';
 
 const Layout = () => {
@@ -35,7 +36,7 @@ const Layout = () => {
           <div className="">
             <Routes>
               <Route path="/login" element={<Login />} />
-              <Route path="/signup" element={<SignUp />} />
+              <Route path="/register" element={<Register />} />
               <Route
                 path="/"
                 element={

@@ -1,183 +1,58 @@
 import { db } from '../firebase/firebase';
-import { collection, addDoc, getDocs } from 'firebase/firestore';
+import {
+  collection,
+  addDoc,
+  getDocs,
+  doc,
+  getDoc,
+  query,
+  where,
+} from 'firebase/firestore';
 
-// Get all tasks from Firestore
+export const addTask = async (task) => {
+  await addDoc(collection(db, 'tasks'), task);
+};
+
 export const getTasks = async () => {
   const querySnapshot = await getDocs(collection(db, 'tasks'));
   return querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
 };
 
-// Add a new task
-export const addTask = async (task) => {
-  await addDoc(collection(db, 'tasks'), task);
-};
+export const getTaskById = async (taskId) => {
+  const taskRef = doc(db, 'tasks', taskId); // Reference to specific task
+  const taskSnap = await getDoc(taskRef); // Fetch the task document
 
-export const addTaskApi = async (task) => {
-  const url = '/tasks';
-
-  try {
-    const response = await fetch(import.meta.env.VITE_BASE_URL + url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(task),
-    });
-
-    if (!response.ok) {
-      throw new Error(`Failed to create post: ${response.statusText}`);
-    }
-
-    const newTask = await response.json();
-    console.log('Task added successfully:', newTask);
-    return newTask;
-  } catch (error) {
-    console.error('Error adding task:', error);
-    throw error;
+  if (taskSnap.exists()) {
+    return { id: taskSnap.id, ...taskSnap.data() }; // Return task with ID
+  } else {
+    return null; // Return null if task doesn't exist
   }
 };
 
-export const getAllTasksApi = async () => {
-  const url = `/tasks`;
+export const getTasksByMentorId = async (mentorId) => {
+  const q = query(
+    collection(db, 'tasks'),
+    where('mentors', 'array-contains', mentorId)
+  );
+  const querySnapshot = await getDocs(q);
 
-  try {
-    const response = await fetch(import.meta.env.VITE_BASE_URL + url, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-
-    if (!response.ok) {
-      throw new Error(`Unable to get post : ${response.statusText}`);
-    }
-
-    const data = await response.json();
-
-    return data;
-  } catch (error) {
-    console.error('Error creating post:', error);
-    throw error;
-  }
+  return querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
 };
 
-export const getTaskByIdApi = async (id) => {
-  const url = `/tasks/${id}`;
+export const getTasksByDueDate = async (dueDate) => {
+  const q = query(collection(db, 'tasks'), where('dueDate', '==', dueDate));
+  const querySnapshot = await getDocs(q);
 
-  try {
-    const response = await fetch(import.meta.env.VITE_BASE_URL + url, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-
-    if (!response.ok) {
-      throw new Error(`Unable to get post : ${response.statusText}`);
-    }
-
-    const text = await response.text(); // Read response as text first
-    console.log('Raw API Response:', text);
-
-    const data = JSON.parse(text); // Now parse JSON manually
-    console.log('Parsed API Data:', data);
-    console.log('✅ Parsed API Data:', data);
-    console.log('🛠 Type of mentors:', typeof data.mentors, data.mentors);
-
-    return data;
-  } catch (error) {
-    console.error('Error creating post:', error);
-    throw error;
-  }
+  return querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
 };
 
-export const getTaskByMentorIdApi = async (mentorId) => {
-  const url = `/tasks`;
+export const getTasksCreatedBetweenDates = async (startDate, endDate) => {
+  const q = query(
+    collection(db, 'tasks'),
+    where('createdAt', '>=', startDate),
+    where('createdAt', '<=', endDate)
+  );
 
-  try {
-    const response = await fetch(import.meta.env.VITE_BASE_URL + url, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-
-    if (!response.ok) {
-      throw new Error(`Unable to get post : ${response.statusText}`);
-    }
-
-    const text = await response.text(); // Read response as text first
-
-    const data = JSON.parse(text); // Now parse JSON manually
-
-    const updatedData = data.filter((item) => item.mentors.includes(mentorId));
-
-    // console.log('updated Data', updatedData);
-
-    return updatedData;
-  } catch (error) {
-    console.error('Error creating post:', error);
-    throw error;
-  }
-};
-
-export const getTodaysTasksApi = async (dueDate) => {
-  const url = `/tasks`;
-  try {
-    const response = await fetch(import.meta.env.VITE_BASE_URL + url, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-
-    if (!response.ok) {
-      throw new Error(`Unable to get post : ${response.statusText}`);
-    }
-
-    const data = await response.json();
-
-    const updatedData = data.filter((item) => item.dueDate.includes(dueDate));
-
-    console.log('updated Data', updatedData);
-
-    return updatedData;
-  } catch (error) {
-    console.error('Error creating post:', error);
-    throw error;
-  }
-};
-
-export const getTasksCreatedInDateRange = async (startDate, endDate) => {
-  const url = `/tasks`;
-
-  try {
-    const response = await fetch(import.meta.env.VITE_BASE_URL + url, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-
-    if (!response.ok) {
-      throw new Error(`Unable to get tasks: ${response.statusText}`);
-    }
-
-    const data = await response.json();
-
-    // Convert startDate and endDate to Date objects
-    const start = new Date(startDate);
-    const end = new Date(endDate);
-
-    // Filter tasks where dueDate falls within the given range
-    const filteredTasks = data.filter((task) => {
-      const taskDueDate = new Date(task.createdAt);
-      return taskDueDate >= start && taskDueDate <= end;
-    });
-
-    return filteredTasks;
-  } catch (error) {
-    console.error('Error fetching tasks:', error);
-    throw error;
-  }
+  const querySnapshot = await getDocs(q);
+  return querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
 };

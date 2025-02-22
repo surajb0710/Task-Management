@@ -3,6 +3,7 @@ import Calendar from '../components/Calendar';
 import TaskToday from '../components/layout/TaskToday';
 import RunningTask from '../components/cards/RunningTask';
 import { getTasks } from '../firebase/firestore';
+import { getTaskById, getTasksCreatedBetweenDates } from '../api/index';
 
 import Chart from '../components/cards/Chart';
 import { useState, useEffect } from 'react';
@@ -26,6 +27,25 @@ const Dashboard = () => {
       const data = await getTasks();
 
       console.log('--Data--', data);
+    };
+
+    fetchTasks();
+  }, []);
+
+  useEffect(() => {
+    const fetchTasks = async () => {
+      const data = await getTaskById('dUvYd1YcMhJ1lLdsuZPh');
+
+      console.log('--getTaskById--', data);
+
+      // const date = new Date();
+
+      const data1 = await getTasksCreatedBetweenDates(
+        '2025-02-23T08:02:19.284Z',
+        '2025-02-27T18:30:00.000Z'
+      );
+
+      console.log('--getTasksCreatedBetweenDates--', data1);
     };
 
     fetchTasks();
