@@ -1,3 +1,17 @@
+import { db } from '../firebase/firebase';
+import { collection, addDoc, getDocs } from 'firebase/firestore';
+
+// Get all tasks from Firestore
+export const getTasks = async () => {
+  const querySnapshot = await getDocs(collection(db, 'tasks'));
+  return querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+};
+
+// Add a new task
+export const addTask = async (task) => {
+  await addDoc(collection(db, 'tasks'), task);
+};
+
 export const addTaskApi = async (task) => {
   const url = '/tasks';
 
@@ -69,8 +83,6 @@ export const getTaskByIdApi = async (id) => {
     console.log('Parsed API Data:', data);
     console.log('✅ Parsed API Data:', data);
     console.log('🛠 Type of mentors:', typeof data.mentors, data.mentors);
-
-    // const data = await response.json();
 
     return data;
   } catch (error) {

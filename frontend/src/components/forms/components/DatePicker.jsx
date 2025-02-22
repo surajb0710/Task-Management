@@ -8,7 +8,9 @@ export default function BasicDatePicker({ setSelectedDate }) {
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <DatePicker
         label="Select Due Date"
-        onChange={(newDate) => setSelectedDate(newDate)}
+        onChange={(newDate) => {
+          return setSelectedDate(newDate);
+        }}
         sx={{
           // Style the input field
           '.MuiOutlinedInput-root': {

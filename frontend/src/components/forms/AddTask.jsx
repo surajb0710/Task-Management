@@ -5,13 +5,16 @@ import DatePicker from './components/DatePicker';
 import FileUploader from './components/FileUploader';
 import CloseIcon from '@mui/icons-material/Close';
 import PropTypes from 'prop-types';
+import { convertISTtoUTC } from '../../utils/dateFormat';
 
 import { addTaskApi } from '../../api/apiService';
-import { useState, useEffect, useMemo } from 'react';
+import { addTask } from '../../api/tasks';
+import { useState, useEffect, useMemo, useRef } from 'react';
 
 const AddTask = ({ setShowAddTaskModel }) => {
   const [selectedMentors, setSelectedMentors] = useState([]);
   const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedImages, setSelectedImages] = useState([]);
 
   const initialValues = useMemo(
     () => ({
@@ -39,27 +42,49 @@ const AddTask = ({ setShowAddTaskModel }) => {
     onSubmit: async (values, { resetForm }) => {
       try {
         await addTaskApi(values);
+        await addTask(values);
         resetForm();
         setShowAddTaskModel(false);
+        console.log('Final task data:', values);
       } catch (e) {
         console.log('Error : ', e);
       }
     },
   });
 
+  const prevDateRef = useRef(null);
+
   useEffect(() => {
-    if (selectedDate !== formik.values.dueDate) {
-      formik.setFieldValue('dueDate', selectedDate);
+    if (selectedDate && selectedDate !== prevDateRef.current) {
+      const timestamp = convertISTtoUTC(new Date(selectedDate));
+
+      if (formik.values.dueDate !== timestamp) {
+        formik.setFieldValue('dueDate', timestamp);
+      }
+
+      prevDateRef.current = selectedDate;
     }
   }, [selectedDate, formik]);
 
   useEffect(() => {
-    if (selectedMentors !== formik.values.mentors) {
+    if (
+      selectedMentors.length !== formik.values.mentors.length ||
+      !selectedMentors.every(
+        (mentor, idx) => mentor === formik.values.mentors[idx]
+      )
+    ) {
       formik.setFieldValue('mentors', selectedMentors);
     }
-  }, [selectedMentors, formik]);
+  }, [selectedMentors, formik.values.mentors, formik]);
 
-  console.log('----Log 00---');
+  useEffect(() => {
+    if (
+      selectedImages.length !== formik.values.media.length ||
+      !selectedImages.every((img, idx) => img === formik.values.media[idx])
+    ) {
+      formik.setFieldValue('media', selectedImages);
+    }
+  }, [selectedImages, formik.values.media, formik]);
 
   return (
     <div className="fixed p-6 rounded-lg left-[50%] top-[50%] transform -translate-x-1/2 -translate-y-1/2 w-200 bg-[#F5F5F7] z-100  text-[#141522]">
@@ -166,14 +191,14 @@ const AddTask = ({ setShowAddTaskModel }) => {
         <div className="flex-1">
           <label className="block mb-2">Mentors</label>
           <div>
-            <MultiSelectDropdown setSelectedMentors={setSelectedMentors} />
+            <MultiSelectDropdown setMethod={setSelectedMentors} />
           </div>
           {formik.touched.assignee && formik.errors.assignee && (
             <p className="errorMessage">{formik.errors.assignee}</p>
           )}
         </div>
         <DatePicker setSelectedDate={setSelectedDate} />
-        <FileUploader />
+        <FileUploader setSelectedImages={setSelectedImages} />
         <button
           type="submit"
           className="w-full p-2.5 bg-black text-white rounded-lg"

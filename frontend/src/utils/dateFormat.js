@@ -23,5 +23,10 @@ export function getPendingTime(dueDate) {
   }
 }
 
-// Example Usage
-console.log(getPendingTime('2025-02-23T16:00:00Z'));
+export function convertISTtoUTC(istTimeString) {
+  // Parse the IST timestamp
+  const istDate = new Date(istTimeString);
+
+  // Convert to UTC format (ISO string)
+  return istDate.toISOString();
+}
