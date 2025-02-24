@@ -51,7 +51,7 @@ const Register = () => {
         const user = userCredential.user;
 
         const collectionName =
-          formik.values.userType === 'mentor' ? 'mentors' : 'users';
+          formik.values.userType === 'mentor' ? 'mentors' : 'students';
 
         // eslint-disable-next-line no-unused-vars
         const { reviews, followers, tasksMentored, ...studentData } = values;
@@ -83,32 +83,6 @@ const Register = () => {
   }, [selectedImage, formik]);
 
   return (
-    // <div>
-    //   <form onSubmit={handleRegister}>
-    //     <input
-    //       type="email"
-    //       value={email}
-    //       onChange={(e) => setEmail(e.target.value)}
-    //       placeholder="Email"
-    //       required
-    //     />
-    //     <input
-    //       type="password"
-    //       value={password}
-    //       onChange={(e) => setPassword(e.target.value)}
-    //       placeholder="Password"
-    //       required
-    //     />
-    //     <select
-    //       value={selectedUserType}
-    //       onChange={(e) => setSelectedUserType(e.target.value)}
-    //     >
-    //       <option value="student">Student</option>
-    //       <option value="mentor">Mentor</option>
-    //     </select>
-    //     <button type="submit">Register</button>
-    //   </form>
-    // </div>
     <div className="fixed p-6 rounded-lg left-[50%] top-[50%] transform -translate-x-1/2 -translate-y-1/2 w-200 bg-[#F5F5F7] z-100  text-[#141522]">
       <form className="flex flex-col gap-4" onSubmit={formik.handleSubmit}>
         <div>

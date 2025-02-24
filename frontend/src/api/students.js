@@ -10,7 +10,7 @@ import {
   // where,
 } from 'firebase/firestore';
 
-export const getMentors = async () => {
-  const querySnapshot = await getDocs(collection(db, 'mentors'));
+export const getStudents = async () => {
+  const querySnapshot = await getDocs(collection(db, 'students'));
   return querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
 };

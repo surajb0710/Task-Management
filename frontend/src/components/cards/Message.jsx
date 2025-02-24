@@ -1,39 +1,46 @@
-import { persons } from '../../assets/assets.js';
-import DoneAllOutlinedIcon from '@mui/icons-material/DoneAllOutlined';
-import DoneOutlinedIcon from '@mui/icons-material/DoneOutlined';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { getAuth } from 'firebase/auth';
+import { getChat, createChat } from '../../utils/chatUtils'; // Helper functions
+import ChatComponent from '../ChatComponent';
+import PropTypes from 'prop-types';
 
-const Message = () => {
-  const [messageReceivedByReceiver, setMessageReceivedByReceiver] =
-    useState(false);
-  const [messageReadByReceiver, setMessageReadByReceiver] = useState(false);
-  const [unReadMessage, setUnReadMessage] = useState(true);
+const Messages = ({ receiverId }) => {
+  const auth = getAuth();
+  const userId = auth.currentUser ? auth.currentUser.uid : null;
+  const [chatId, setChatId] = useState(null);
+
+  useEffect(() => {
+    const loadChat = async () => {
+      console.log('🔍 Checking for existing chat between:', userId, receiverId);
+
+      let chat = await getChat(userId, receiverId);
+      console.log('📌 Chat ID received:', chat);
+
+      if (!chat) {
+        console.log('⚠️ No chat found. Creating a new one...');
+        chat = await createChat(userId, receiverId);
+        console.log('🆕 New Chat ID:', chat);
+      }
+
+      setChatId(chat);
+    };
+
+    loadChat();
+  }, [userId, receiverId]);
+
+  console.log('--userId---', userId);
+  console.log('--receiverId---', receiverId);
+  console.log('--chatId---', chatId);
+
+  if (!userId || !receiverId || !chatId) return <p>Loading chat...</p>;
 
   return (
-    <>
-      <div className="flex gap-3 px-5 py-2.5 bg-[#FAFAFA] rounded-[10px]">
-        <img src={persons.person1} alt="" className="w-12 h-12 rounded-full" />
-        <div className="flex flex-col gap-2 grow">
-          <div className="flex justify-between items-center">
-            <p className="text-sm font-semibold text-[#141522]">
-              Angelie Crison
-            </p>
-            <p className="text-sm text-[#8E92BC]">1 m Ago</p>
-          </div>
-          <div className="flex justify-between items-center">
-            <p className="text-sm text-[#141522]">
-              Thank you very much. I’m glad ...
-            </p>
-            {unReadMessage && (
-              <div className="rounded-full bg-[#DB5962] w-2 h-2"></div>
-            )}
-            {messageReceivedByReceiver && <DoneOutlinedIcon />}
-            {messageReadByReceiver && <DoneAllOutlinedIcon />}
-          </div>
-        </div>
-      </div>
-    </>
+    <ChatComponent chatId={chatId} userId={userId} receiverId={receiverId} />
   );
 };
 
-export default Message;
+Messages.propTypes = {
+  receiverId: PropTypes.string.isRequired,
+};
+
+export default Messages;

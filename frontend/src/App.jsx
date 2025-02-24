@@ -23,15 +23,16 @@ const Layout = () => {
   return (
     <AuthProvider>
       <div className="bg-[#F5F5F7] flex max-w-screen">
-        {location.pathname !== '/signup' && location.pathname !== '/login' && (
-          <Sidebar setShowAddTaskModel={setShowAddTaskModel} />
-        )}
+        {location.pathname !== '/register' &&
+          location.pathname !== '/login' && (
+            <Sidebar setShowAddTaskModel={setShowAddTaskModel} />
+          )}
         {showAddTaskModel && (
           <AddTask setShowAddTaskModel={setShowAddTaskModel} />
         )}
         <div className="grow">
           {location.pathname !== '/' &&
-            location.pathname !== '/signup' &&
+            location.pathname !== '/register' &&
             location.pathname !== '/login' && <Header />}
           <div className="">
             <Routes>
