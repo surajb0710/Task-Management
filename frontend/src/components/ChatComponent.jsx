@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { sendMessage } from '../utils/chatUtils';
 import PropTypes from 'prop-types';
 import { fetchMessages } from '../api';
+import { format, isToday } from 'date-fns';
 
 // const socket = io('http://localhost:5001'); // Replace with your backend URL
 
@@ -38,18 +39,27 @@ const ChatComponent = ({ chatId, userId, receiverId }) => {
 
   return (
     <div>
-      <div>
-        {messages.map((msg, index) => (
-          <div key={index} className="flex">
-            <p className={msg.senderId === userId ? 'sent' : 'received'}>
-              {msg.text}
-            </p>
-            {/* <div>
-              <p>sender : {currentUser.name}</p>
-              <p>receiver : {receiver.name}</p>
-            </div> */}
-          </div>
-        ))}
+      <div className="px-4">
+        {messages.map((msg) => {
+          const timestamp = msg.timestamp.toDate();
+          const formattedTime = isToday(timestamp)
+            ? format(timestamp, 'hh:mm a') // Show only time if today
+            : format(timestamp, 'dd MMM yyyy, hh:mm a');
+
+          return (
+            <div
+              key={msg.id}
+              className={`p-2 my-1 max-w-max  rounded-lg text-white ${
+                msg.senderId === userId
+                  ? 'bg-blue-500 ml-auto text-right'
+                  : 'bg-gray-500 mr-auto text-left'
+              }`}
+            >
+              <p>{msg.text}</p>
+              <span>{formattedTime}</span>
+            </div>
+          );
+        })}
       </div>
       <input
         value={input}
