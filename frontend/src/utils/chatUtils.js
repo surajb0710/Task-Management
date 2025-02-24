@@ -4,6 +4,8 @@ import {
   query,
   where,
   getDocs,
+  orderBy,
+  onSnapshot,
   // serverTimestamp,
 } from 'firebase/firestore';
 import { db } from '../firebase/firebase';
@@ -69,4 +71,24 @@ export const sendMessage = async (chatId, senderId, receiverId, text) => {
   } catch (error) {
     console.error('🔥 Error sending message:', error);
   }
+};
+
+export const fetchMessages = (chatId, setMessages) => {
+  if (!chatId) {
+    console.error('❌ No chatId provided.');
+    return;
+  }
+
+  const messagesRef = collection(db, `chats/${chatId}/messages`);
+  const q = query(messagesRef, orderBy('timestamp', 'asc'));
+
+  return onSnapshot(q, (snapshot) => {
+    const fetchedMessages = snapshot.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
+
+    console.log('📥 Firestore updated messages:', fetchedMessages);
+    setMessages(fetchedMessages);
+  });
 };

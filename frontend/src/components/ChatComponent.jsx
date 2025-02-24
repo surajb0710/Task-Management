@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react';
-import io from 'socket.io-client';
-import { sendMessage as saveMessageToFirestore } from '../utils/chatUtils';
+// import io from 'socket.io-client';
+import { sendMessage } from '../utils/chatUtils';
 import PropTypes from 'prop-types';
-import { fetchMessages, getUserById } from '../api';
+import { fetchMessages } from '../api';
 
-const socket = io('http://localhost:5001'); // Replace with your backend URL
+// const socket = io('http://localhost:5001'); // Replace with your backend URL
 
-const ChatComponent = ({ chatId, userId, receiverId, receiver }) => {
+const ChatComponent = ({ chatId, userId, receiverId }) => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
-  const [currentUser, setCurrentUser] = useState({});
+  // const [currentUser, setCurrentUser] = useState({});
 
   console.log('------ChatComponent------chatId-----------', chatId);
   console.log('------ChatComponent------userId-----------', userId);
@@ -18,49 +18,22 @@ const ChatComponent = ({ chatId, userId, receiverId, receiver }) => {
   useEffect(() => {
     if (!chatId) return;
 
-    console.log(`🔄 Fetching messages for chat: ${chatId}`);
+    console.log(`📡 Subscribing to chat messages for chatId: ${chatId}`);
 
-    // Fetch messages from Firestore (real-time listener)
     const unsubscribe = fetchMessages(chatId, setMessages);
 
-    // Join chat room for real-time messages
-    socket.emit('join', chatId);
-
-    // Listen for messages sent by the other user
-    socket.on('receiveMessage', (message) => {
-      if (message.senderId !== userId) {
-        console.log('📩 New message from receiver:', message);
-        setMessages((prev) => [...prev, message]); // Only update for received messages
-      }
-    });
-
     return () => {
-      unsubscribe(); // Unsubscribe Firestore listener
-      socket.off('receiveMessage'); // Remove Socket.io listener
+      console.log(`📴 Unsubscribing from chat messages for chatId: ${chatId}`);
+      unsubscribe();
     };
-  }, [chatId, userId]);
-
-  useEffect(() => {
-    const fetchCurrentUser = async (userId) => {
-      const currentUser = await getUserById(userId);
-      setCurrentUser(currentUser);
-    };
-
-    fetchCurrentUser(userId);
-  }, [userId]);
-
-  console.log('-------currentUser-----', currentUser);
+  }, [chatId]);
 
   const handleSend = async () => {
     if (!input.trim()) return;
 
-    const message = { chatId, senderId: userId, receiverId, text: input };
-    await saveMessageToFirestore(chatId, userId, receiverId, input);
+    await sendMessage(chatId, userId, receiverId, input);
 
-    socket.emit('sendMessage', message);
-
-    setMessages((prev) => [...prev, message]);
-    setInput('');
+    setInput(''); // Clear input field
   };
 
   return (
@@ -71,10 +44,10 @@ const ChatComponent = ({ chatId, userId, receiverId, receiver }) => {
             <p className={msg.senderId === userId ? 'sent' : 'received'}>
               {msg.text}
             </p>
-            <div>
+            {/* <div>
               <p>sender : {currentUser.name}</p>
               <p>receiver : {receiver.name}</p>
-            </div>
+            </div> */}
           </div>
         ))}
       </div>
